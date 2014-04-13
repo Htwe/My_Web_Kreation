@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+
+b {color:red;}
+h1 {  
+margin-left: 70px;  
+}  
+form li {  
+list-style: none;  
+  
+}  
+  
+form ul li label{  
+float: left;  
+clear: left;  
+width: 150px;  
+text-align: right;
+
+margin-right: 50px;
+margin-bottom:20px;  
+font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+font-weight:bolder;
+font-size:18px;  
+}  
+  
+form ul li input, select, span {  
+float: left;  
+margin-bottom: 10px;  
+}  
+  
+form textarea {  
+float: left;  
+width: 350px;
+margin-bottom:10px;
+height: 100px;  
+}  
+  
+[type="submit"] {  
+clear: left;  
+margin: 20px 0 0 230px;  
+font-size:18px  
+}  
+[type="reset"] {  
+clear:right;  
+margin: 20px 0 0 230px;  
+font-size:18px  
+}  
+  
+p {  
+margin-left: 70px;  
+font-weight: bold;  
+text-align: center;  
+}  
+fieldset {
+  
+   
+    font-family: sans-serif;
+    border: 5px solid #1F497D;
+    background: #ddd;
+}
+
+fieldset legend {
+	
+    background: #1F497D;
+    color: #fff;
+    padding: 5px 10px ;
+    font-size: 32px;
+    border-radius: 8px;
+    box-shadow: 0 0 0 5px #ddd;
+    margin-left: 20px;
+}
