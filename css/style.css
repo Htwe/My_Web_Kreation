@@ -186,6 +186,78 @@ ul.slidebar_submenu{
 ul.slidebar_submenu li{
 	padding-left:20px;
 }
+
+
+.formSection
+{
+	float: right;
+	width: 71%;
+	 
+	display: inline;
+}
+
+fieldset {
+  
+   
+    font-family: sans-serif;
+    border: 2px groove #630;
+	background-color:#f9dfd7;
+	
+}
+
+fieldset legend {
+	
+    background: #630;
+    color: #fff;
+    padding: 5px 10px ;
+    font-size: 24px;
+    border-radius: 8px;
+	box-shadow: 0 0 0 5px #c1afa7;
+    
+    margin-left: 20px;
+}
+[type="submit"] {  
+clear: left;
+margin-left:170px;
+margin-right:50px;
+font-size:18px;  
+}  
+[type="reset"] {  
+clear:right;  
+  
+font-size:18px;  
+}
+b {color:red;}
+form li {  
+list-style: none;  
+  
+}  
+  
+form ul li label{  
+float: left;  
+clear: left;  
+width: 150px;  
+text-align: right;
+
+margin-right: 50px;
+margin-bottom:20px;  
+font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+font-weight:bolder;
+font-size:16px;  
+}  
+  
+form ul li input, select, span {  
+float: left;  
+margin-bottom: 10px;  
+}  
+  
+form textarea {  
+float: left;  
+
+margin-bottom:10px;
+height: 100px;  
+}  
+
 .footerBg {
 	background:#c0d1b9 url(../image/footerBg_bg.gif) repeat left top;
 	border-top:1px solid #fff;
