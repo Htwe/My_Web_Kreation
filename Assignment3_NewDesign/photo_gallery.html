@@ -6,12 +6,8 @@
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
-<script type="text/javascript" src="js/swfobject.js"></script>
+<script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
 
-<script type="text/javascript">
-	swfobject.registerObject("myId", "9.0.0", "flashmo_121_3d_grid_gallery.swf");
-</script>
 
 <script type="text/javascript">
 function Slider(){
@@ -30,6 +26,7 @@ function Slider(){
 			},6500);
 }
 </script>
+
 </head>
 
 <body onload="Slider();">
@@ -37,55 +34,41 @@ function Slider(){
 	<!---Header--->
 	<div class="header">
 		<div class="header_resize">
-			<div class="logo">
-				<a href="index.html"><img src="image/logo.png" width="130" height="100" alt=""/></a>
-			</div>
-			<div class="shopping_cart">
+			<div class="customer_connect">
 				<table>
 					<tr>
-						<td>
-							<a href="#"><img src="image/fb-icon.png" width="40" height="40" alt=""/></a>
-							<a href="#"><img src="image/twitter-icon.png" width="40" height="40" alt=""/></a>
-							<a href="#"><img src="image/googlePlus-icon.png" width="40" height="40" alt=""/></a>
-						</td>
+						<td style="width: 100px; padding-left: 300px; "><a href="#" style="text-decoration: none;">Facebook</a></td>
+						<td style="width: 100px; text-align:center;"><a href="#" style="text-decoration: none;">Twitter</a></td>
+						<td style="width: 100px; text-align:center;"><a href="#" style="text-decoration: none;">Google+</a></td>
+						<td style="width: 100px; padding-left: 400px;"><a href="#" style="text-decoration: none;">Login</a></td>
+						<td style="width: 100px;"><a href="#" style="text-decoration: none;">Register</td>
 					</tr>
-					<tr>
-						<td><a href="#"><img src="image/shoppingCart-icon.png" width="40" height="40" alt=""/></a><b>Shopping Cart</b></td>						
-					</tr>
-				</table>				
+				</table>
 			</div>
-			<div class="clr"></div>
-			<div class="slider">				 
-					<img id="1"  src="image/slide1.jpg" width="960" height="360" border="0"/>
-					<img id="2"  src="image/slide2.jpg" width="960" height="360" border="0"/>
-					<img id="3"  src="image/slide3.jpg" width="960" height="360" border="0"/>
-					<img id="4"  src="image/slide4.jpg" width="960" height="360" border="0"/>
-					<img id="5"  src="image/slide5.jpg" width="960" height="360" border="0"/>									
-				<div class="clr"></div>
-			</div>
-			<div class="clr"></div>
+			<div class="logo">
+				<a href="index.html"><img src="image/logo.png" width="130" height="100" alt=""/></a>
+			</div>			
 			<div class="menu_nav">
 				<ul>
-				  <li class="active"><a href="index.html"><span>Home</span></a></li>
-				  <li><a href="#"><span>Login/Register</span></a></li>
-				  <li><a href="#"><span>Knowledge</span></a>
+				  <li class="active"><a href="index.html"><span><strong>Home</strong></span></a></li>				  
+				  <li><a href="#"><span><strong>Knowledge</strong></span></a>
 					<ul>
-						<li><a href="#">Size Chart</a></li>
-						<li><a href="#">Color Chart</a></li>
-						<li><a href="#">FAQ</a></li>
-						<li><a href="#">Delivery Time</a></li>
+						<li><a href="#"><strong>Size Chart</strong></a></li>
+						<li><a href="#"><strong>Color Chart</strong></a></li>
+						<li><a href="#"><strong>FAQ</strong></a></li>
+						<li><a href="#"><strong>Delivery Time</strong></a></li>
 					</ul>
 				  </li>					
-				  <li><a href="#"><span>Service</span></a>
+				  <li><a href="#"><span><strong>Service</strong></span></a>
 					<ul>
-						<li><a href="#">Delivery</a></li>
-						<li><a href="#">Credit Cart Payment</a></li>						
+						<li><a href="#"><strong>Delivery</strong></a></li>
+						<li><a href="#"><strong>Credit Cart Payment</strong></a></li>						
 					</ul>
 				  </li>
-				  <li><a href="#"><span>About</span></a>
+				  <li><a href="#"><span><strong>About</strong></span></a>
 					<ul>
-						<li><a href="#">About Us</a></li>
-						<li><a href="#">Contact Us</a></li>						
+						<li><a href="#"><strong>About Us</strong></a></li>
+						<li><a href="#"><strong>Contact Us</strong></a></li>						
 					</ul>
 				  </li>
 				</ul>
@@ -96,19 +79,73 @@ function Slider(){
 	
 	<!---Content--->
 	<div class="content">
-		<div class="content_resize">			
-			<div id="DivCustomizableGridGalleryFX"></div>				
-				<script type="text/javascript">
-				 var flashvars = {};
-				 var params = {};
-				 params.base = "";
-				 params.scale = "noscale";
-				 params.salign = "tl";
-				 params.wmode = "transparent";
-				 params.allowFullScreen = "true";
-				 params.allowScriptAccess = "always";
-				 swfobject.embedSWF("CustomizableGridGalleryFX.swf", "DivCustomizableGridGalleryFX", "950", "750", "9.0.0", false, flashvars, params);
-				</script>
+		<div class="content_resize">
+			<div class="shopping_card">
+				<p>Shopping Cart</p>
+			</div>
+			<div class="sidebar">
+				<div class="gadget">
+				  <h2><span>Dresses & Accessories</span></h2>
+				  <div class="clr"></div>
+				  <ul class="sidebar_menu">
+					<li><h4>Dresses</h4>
+						<ul class="slidebar_submenu">
+							<li><a href="#">Wedding Dresses</a></li>
+							<li><a href="#">Bridesmaid Dresses</a></li>
+							<li><a href="#">Quinceanera Dresses</a></li>
+							<li><a href="#">Prom Gowns</a></li>
+							<li><a href="#">Informal Gowns</a></li>
+						</ul>
+					</li>						
+					<li><h4>Shoes</h4>
+						<ul class="slidebar_submenu">
+							<li><a href="#">Evening Shoes</a></li>
+							<li><a href="#">Day Shoes</a></li>
+							<li><a href="#">Bridal Shoes</a></li>							
+						</ul>
+					</li>
+					<li><h4>Accessories</h4>
+						<ul class="slidebar_submenu">
+							<li><a href="#">Veils</a></li>
+							<li><a href="#">Headpieces</a></li>
+							<li><a href="#">Jewellery</a></li>	
+							<li><a href="#">Gloves</a></li>
+							<li><a href="#">Garter</a></li>							
+						</ul>
+					</li>					
+				  </ul>
+				</div>
+			</div>
+			<div class="main_text">	
+				<div class="gallery_title">
+					<h1>Photo Gallery</h1>
+				</div>
+				<section id="dg-container" class="dg-container">
+				<div class="dg-wrapper">
+					<a href="#"><img src="image/gallery/1.jpg" alt="image01"><div></div></a>
+					<a href="#"><img src="image/gallery/2.jpg" alt="image02"><div></div></a>
+					<a href="#"><img src="image/gallery/3.jpg" alt="image03"><div></div></a>
+					<a href="#"><img src="image/gallery/4.jpg" alt="image04"><div></div></a>
+					<a href="#"><img src="image/gallery/5.jpg" alt="image05"><div></div></a>
+					<a href="#"><img src="image/gallery/6.jpg" alt="image06"><div></div></a>
+					<a href="#"><img src="image/gallery/7.jpg" alt="image07"><div></div></a>
+					<a href="#"><img src="image/gallery/8.jpg" alt="image08"><div></div></a>
+					<a href="#"><img src="image/gallery/9.jpg" alt="image09"><div></div></a>
+					<a href="#"><img src="image/gallery/10.jpg" alt="image10"><div></div></a>
+					<a href="#"><img src="image/gallery/11.jpg" alt="image11"><div></div></a>
+					<a href="#"><img src="image/gallery/12.jpg" alt="image12"><div></div></a>
+				</div>
+				<nav>	
+					<span class="dg-prev">&lt;</span>
+					<span class="dg-next">&gt;</span>
+				</nav>
+			</section>
+				
+				<div class="clr"></div>
+			</div>
+			</div>
+			<div class="clr"></div>				
+			</div>
 			<div class="clr"></div>
 		</div>
 	</div>
@@ -173,8 +210,15 @@ function Slider(){
 		</div>
 	</div>
 </div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.gallery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#dg-container').gallery();
+	});
+</script/>
 <!--jQuery plug-in code-->
-<script>
+<!-- <script>
 	$('.testimonials-slider').bxSlider({
 		slideWidth: 296,
 		minSlides: 1,
@@ -183,7 +227,7 @@ function Slider(){
 		auto: true,	
 		autoControls: true
 	  });
-</script>
+</script> -->
 </body>
 
 </html>
