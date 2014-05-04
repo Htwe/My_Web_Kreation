@@ -121,7 +121,7 @@ function Slider(){
 						<tr>
 							<td style="height: 450px; text-align:center;">							
 								<p>
-									<a class="image_text" href="#" title="Price = S$600">
+									<a class="image_text" href="product1.php" title="Price = S$600">
 									<img src="image/wedding dress/dress1.jpg" width="280px" height="400px" border="3"/>
 									</a>
 								</p>								

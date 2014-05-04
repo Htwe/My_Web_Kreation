@@ -1,12 +1,15 @@
 <html>
 <head>
-<title>Yes I Do</title>
+<title>Yes I Do | Product Details</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+
+<script src='js/jquery.zoom.js'></script>
+<script>
 <script type="text/javascript">
 function Slider(){
 	$(".slider #1").show("fade",500);
@@ -23,47 +26,16 @@ function Slider(){
 				}
 			},6500);
 }
-
-var minW = 1200;
-
-$(function (){
-CheckSizeZoom()
-$('#divWrap').css('visibility', 'visible');
-});
-$(window).resize(CheckSizeZoom)
-
-function CheckSizeZoom() {
-	if ($(window).width() < minW) {
-	var zoomLev = $(window).width() / minW;
-
-	if (typeof (document.body.style.zoom) != "undefined") {
-	$(document.body).css('zoom', zoomLev);
-	}
-	else {
-
-	$('#divWrap').css('-moz-transform', "scale(" + zoomLev + ")");
-	$('#divWrap').width($(window).width() / zoomLev + 10);
-	$('#divWrap').css('position', 'relative');
-	$('#divWrap').css('left', (($(window).width() - minW - 16) / 2) + "px");
-	$('#divWrap').css('top', "-19px");
-	$('#divWrap').css('position', 'relative');
-	}
-	}
-	else {
-	$(document.body).css('zoom', '');
-	$('#divWrap').css('position', '');
-	$('#divWrap').css('left', "");
-	$('#divWrap').css('top', "");
-	$('#divWrap').css('-moz-transform', "");
-	$('#divWrap').width("");
-	}
-}
+</script>
+<script>
+	$(document).ready(function(){		
+		$('#ex').zoom({ on:'click' });	
+	});
 </script>
 
 </head>
 
 <body onLoad="Slider();">
-<div id="divWrap" style="visibility: hidden">
 <div class="main">
 	<!---Header--->
 	<div class="header">
@@ -150,48 +122,81 @@ function CheckSizeZoom() {
 				  </ul>
 				</div>
 			</div>
-			<div class="main_text">	
-				<div class="slider">				 
-					<img id="1"  src="image/slider/slide1.jpg" width="960" height="360" border="3"/>
-					<img id="2"  src="image/slider/slide2.jpg" width="960" height="360" border="3"/>
-					<img id="3"  src="image/slider/slide3.jpg" width="960" height="360" border="3"/>
-					<img id="4"  src="image/slider/slide4.jpg" width="960" height="360" border="3"/>
-					<img id="5"  src="image/slider/slide5.jpg" width="960" height="360" border="3"/>
-				</div>
-				
-				<div class="product">
-					<table class="product_lists">
+			<div class="main_text">
+				<h1>Product Code : 0001</h1>
+				<h2>Price : S$600</h2>
+				<div class="product_catalog">
+					<table class="item">
 						<tr>
-							<td style="height: 450px; text-align:center;">							
-								<p>
-									<a class="image_text" href="#" title="Price = S$600">
-									<img src="image/wedding dress/dress1.jpg" width="280px" height="400px" border="3"/>
-									</a>
-								</p>								
+							<td>
+								<table id="item_details">
+									<tr>
+										<td>Description</td>
+										<td>Description put here.</td>
+									</tr>
+									<tr class="alt">
+										<td>Colour</td>
+										<td>Ivory</td>
+									</tr>
+									<tr>
+										<td>Size</td>
+										<td>0-30</td>
+									</tr>
+									<tr class="alt">
+										<td>Weight</td>
+										<td>2.0000</td>
+									</tr>
+									<tr>
+										<td>Build-In Bra</td>
+										<td>yes</td>
+									</tr>
+									<tr class="alt">
+										<td>Back Details</td>
+										<td>Zipper</td>
+									</tr>
+									<tr>
+										<td>Body Shape</td>
+										<td>No</td>
+									</tr>
+									<tr class="alt">
+										<td>Sleeve Length</td>
+										<td>Sleeveless</td>
+									</tr>
+									<tr>
+										<td>Sleeve Style</td>
+										<td>No</td>
+									</tr>
+								</table>
 							</td>
-							<td style="height: 450px; text-align:center;">
-								<p>
-									<a class="image_text" href="#" title="Price = S$400">
-									<img src="image/wedding dress/dress2.jpeg" width="280px" height="400px" border="3"/>
-									</a>
-								</p>
+							<td class="zoom" id="ex" rowspan="2" style="border:3px solid #980000; height: 450px; text-align:center; width:300px">								
+								<img src="image/wedding dress/dress1.jpg" width="280px" height="400px" border="0"/>
+								<p>Click to Zoom-In</p>
 							</td>
 						</tr>
 						<tr>
-							<td class="product_details">
-								<input id="detailsBtn" type="button" value="Details">
-								<input id="addChartBtn" type="button" value="Add Chart">
+							<td style="height: 60px; text-align:right;">
+								<form name="" action="" method="get">
+									<h4 style="color:#000000">Qty
+									<select>
+									  <option value="1">1</option>
+									  <option value="2">2</option>
+									  <option value="3">3</option>
+									  <option value="4">4</option>
+									  <option value="5">5</option>
+									  <option value="6">6</option>
+									  <option value="7">7</option>
+									  <option value="8">8</option>
+									  <option value="9">9</option>
+									  <option value="10">10</option>
+									</select>									
+									</h4>
+									<input id="addChartBtn" type="button" value="Add Chart">
+								</form>
 							</td>
-							<td class="product_details">
-								<input id="detailsBtn" type="button" value="Details">
-								<input id="addChartBtn" type="button" value="Add Chart">
-							</td>
-						</tr>						
+						</tr>
 					</table>
 				</div>
 				<div class="clr"></div>
-			</div>
-			</div>
 			<div class="clr"></div>				
 			</div>
 			<div class="clr"></div>
@@ -269,7 +274,6 @@ function CheckSizeZoom() {
 		autoControls: true
 	  });
 </script> --->
-</div>
 </body>
 
 </html>
