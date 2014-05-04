@@ -34,7 +34,9 @@ p {
 }
 .header {
 	background:#ffffff;
+	position: relative;
 }
+
 .header_resize {
 	margin:0 auto;
 	padding:0;
@@ -49,6 +51,11 @@ p {
 	width:auto;
 	float:left;	
 	margin: 0 auto 0 100px;	
+	position: relative;
+}
+.logobar{
+	background-color:#000;
+	size:100%;
 }
 .menu_nav {
 	margin:20px 250px 0 0;
@@ -82,7 +89,7 @@ p {
 	float: left;
 }
 	.menu_nav ul li:hover {
-		background: #c7c7c7;
+		background: #FF6699;
 		
 	}
 		.menu_nav ul li:hover a {
@@ -91,15 +98,15 @@ p {
 	
 	.menu_nav ul li a {
 		display: block; padding: 25px 40px;
-		color: #c7c7c7; text-decoration: none;
+		color: #FF6699; text-decoration: none;
 	}
 .menu_nav ul ul {
-	background: #c7c7c7; border-radius: 0px; padding: 0;
+	background: #FF6699; border-radius: 0px; padding: 0;
 	position: absolute; top: 100%;
 }
 	.menu_nav ul ul li {
 		float: none; 
-		background: #c7c7c7;
+		background: #FF6699;
 		border-top: 1px solid #000000;
 		border-left: 1px solid #000000
 		border-bottom: 1px solid #000000;
@@ -110,7 +117,7 @@ p {
 			color: #000000;			
 		}	
 			.menu_nav ul ul li a:hover {
-				background: #c7c7c7;
+				background: #FF6699;
 			}
 .menu_nav ul li {
 	margin:0;
@@ -134,10 +141,10 @@ p {
 
 .menu_nav ul li a .menu_nav ul li a:hover{
 	text-decoration:none;
-	background:#c7c7c7 repeat-x left top;
+	background:#FF6699 repeat-x left top;
 }
 .content {
-	border-bottom:1px solid #c7c7c7;
+	border-bottom:1px solid #FF6699;
 	position: relative;
 }
 .content_resize {
@@ -155,6 +162,7 @@ p {
 	border-color:#980000;
 	border-width:5px;	
     border-radius: 25px; 
+	position: relative;
 }
 .content .sidebar {
 	margin-left: -240px;
@@ -166,7 +174,8 @@ p {
 	border-style:groove;
 	border-color:#980000;
 	border-width:5px;	
-    border-radius: 25px; 	
+    border-radius: 25px; 
+	position: relative;
 }
 .content .sidebar .gadget {
 	margin:0 0 10px;
@@ -197,6 +206,7 @@ ul.sidebar_menu li a {
 	text-decoration:none;
 	margin-left:-16px;
 	padding:4px 8px 4px 16px;
+	position: relative;
 }
 ul.sidebar_menu li a:hover {
 	color:#980000;
@@ -205,12 +215,18 @@ ul.sidebar_menu li a:hover {
 }
 ul.slidebar_submenu{
 	list-style:none;
+	position: relative;
 }
 ul.slidebar_submenu li{
 	padding-left:20px;
+	position: relative;
 }
 .content .main_text {
 	margin-left: 300px;
+}
+.content .main_text h1{
+	padding-left: 40px;
+	color: #980000;
 }
 .content .slider {
 	height: 480px;
@@ -226,6 +242,115 @@ ul.slidebar_submenu li{
 	position: relative;
 	border-color: white;
 	box-shadow:10px 10px 20px #000000;
+}
+.content .product_lists{
+	width: 960px; 
+	height: 450px;
+}
+.content .product_lists td img{
+	position: relative;
+	border: 2px solid #980000;
+	border-radius:20px;	
+	box-shadow:10px 10px 20px #000000;
+}
+.content .product_lists td img:hover{
+	opacity:0.4;
+	filter:alpha(opacity=40);
+}
+.content .product_lists .product_details {	
+	height: 50px;	
+	text-align:center;
+}
+.content .product_lists .product_details input#detailsBtn{
+	border:2px groove #D8D8D8;
+	cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+	padding: 5px 25px;
+	/*give the background a gradient*/
+	background-color:#000000; /*required for browsers that don't support gradients*/
+	background: -webkit-gradient(linear, left top, left bottom, from(#D8D8D8), to(#000000));
+	background: -webkit-linear-gradient(top, #D8D8D8, #000000);
+	background: -moz-linear-gradient(top, #D8D8D8, #000000);
+	background: -o-linear-gradient(top, #D8D8D8, #000000);
+	background: linear-gradient(top, #D8D8D8, #000000);
+	/*style to the text inside the button*/
+	font-family:Andika, Arial, sans-serif; 
+	color:#fff;
+	font-size:1.1em;
+	letter-spacing:.1em;
+	font-variant:small-caps;
+	/*give the corners a small curve*/
+	-webkit-border-radius: 0 15px 15px 0;
+	-moz-border-radius: 0 15px 15px 0;
+	border-radius: 0 15px 15px 0;
+	/*add a drop shadow to the button*/
+	-webkit-box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+	-moz-box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+	box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;	
+}
+.content .product_lists .product_details input#detailsBtn:hover, input#detailsBtn:focus{
+	color:#edebda;
+	/*reduce the spread of the shadow to give a pushed effect*/
+	-webkit-box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+	-moz-box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+	box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+}
+.content .product_lists .product_details input#addChartBtn{
+	border:2px groove #7c93ba;
+	cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+	padding: 5px 25px;
+	/*give the background a gradient*/
+	background-color:#000000; /*required for browsers that don't support gradients*/
+	background: -webkit-gradient(linear, left top, left bottom, from(#88add7), to(#000000));
+	background: -webkit-linear-gradient(top, #88add7, #000000);
+	background: -moz-linear-gradient(top, #88add7, #000000);
+	background: -o-linear-gradient(top, #88add7, #000000);
+	background: linear-gradient(top, #88add7, #000000);
+	/*style to the text inside the button*/
+	font-family:Andika, Arial, sans-serif; 
+	color:#fff;
+	font-size:1.1em;
+	letter-spacing:.1em;
+	font-variant:small-caps;
+	/*give the corners a small curve*/
+	-webkit-border-radius: 0 15px 15px 0;
+	-moz-border-radius: 0 15px 15px 0;
+	border-radius: 0 15px 15px 0;
+	/*add a drop shadow to the button*/
+	-webkit-box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+	-moz-box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+	box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;	
+}
+.content .product_lists .product_details input#addChartBtn:hover, input#addChartBtn:focus{
+	color:#edebda;
+	/*reduce the spread of the shadow to give a pushed effect*/
+	-webkit-box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+	-moz-box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+	box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+}
+a.image_text {
+	position: relative;
+	width: 280px;
+	text-decoration: none !important;
+	text-align: center;
+}
+a.image_text:after {
+	content: attr(title);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding: 0.5em 20px;
+	width: 244px;
+	background: rgba(0,0,0,0.8);
+	text-decoration: none !important;
+	color: #fff;
+	opacity: 0;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+}
+a.image_text:hover:after, a.image_text:focus:after {
+	opacity: 1.0;
 }
 .gallery_title {	
 	width: 950px;
@@ -306,7 +431,13 @@ ul.slidebar_submenu li{
 }
 .content .product{
 	margin-left: 40px;
-	margin-top: -300px;	 
+	margin-top: 50px;	 
+	height: 480px;
+	width: 850px;
+}
+.content .delivery{
+	margin-left: 50px;
+	margin-top: 30px;	 
 	height: 480px;
 	width: 850px;
 }
@@ -315,6 +446,51 @@ ul.slidebar_submenu li{
 	background-color:#fff;
 	border-radius:15px;
 }
+.formSection
+{ float:left;
+	width: 70%;
+	padding-left:80px;
+	display: inline;
+}
+fieldset {
+    font-family: sans-serif;
+    border: 2px groove #630;
+	border-radius:25px;
+	background-color:#ECECEC;	
+}
+fieldset legend {	
+    background:#903;
+    color: #fff;
+    padding: 5px 10px ;
+    font-size: 24px;
+    border-radius: 8px;
+	box-shadow: 0 0 0 5px #c1afa7;    
+    margin-left: 20px;
+}
+label
+{
+width: 200px;
+padding-right:30px;
+float: left;
+text-align: right;
+margin-right: 0.5em;
+display: block;
+font-family:"Comic Sans MS", cursive;
+font-size:16px;
+}
+
+[type="submit"] {  
+clear: left;
+
+margin-left:200px;
+font-size:18px;  
+}  
+[type="reset"] {  
+clear:right;  
+  
+font-size:18px;  
+}
+b {color:red;}
 .footerBg {
 	background:#000000;
 	border-top:1px solid #fff;
@@ -425,7 +601,7 @@ a {
 .bx-wrapper .testimonials-carousel-thumbnail{ max-width: 35%; float: left; margin-right: 20px; }
 .bx-wrapper .testimonials-carousel-thumbnail img{ display: block;   margin-right: 20px;width: 100px;}
 .bx-wrapper .testimonials-carousel-context{ overflow: hidden; }
-.bx-wrapper .testimonials-name{ font-size: 18px; margin-bottom: 15px; color:#000000; font-weight:400;}
+.bx-wrapper .testimonials-name{ font-size: 18px; margin-bottom: 15px; color:#ffffff; font-weight:400;}
 .bx-wrapper {position: relative;margin: 30px auto;padding: 0;width:100%;*zoom: 1;}
 .bx-wrapper .slide {padding:0;margin:0;display: block;}
 .bx-wrapper .bx-viewport {padding:10px;margin-left:0;z-index:1;width:100%;}
@@ -439,4 +615,39 @@ a {
 .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .bx-wrapper .bx-pager.bx-default-pager a.active {background: #000;}
 .bx-wrapper .bx-controls-direction a {position: absolute;top: 0;margin-top: 0;margin-right: 0px;outline: 0;width: 30px;height: 30px;text-indent: -9999px;z-index: 9999;}
+.btnOrder{
+	background-image:url(../image/deliver/order_btn.png);
+	background-position:  0px 0px;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 26px;
+    border: 0px;
+    background-color: none;
+    cursor: pointer;
+    outline: 0;
+}
+.btnback{
+	background-image:url(../image/deliver/back.png);
+	background-position:  0px 0px;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 26px;
+    border: 0px;
+    background-color: none;
+    cursor: pointer;
+    outline: 0;
+}
+.btnOrder:hover{ 
+      background-position:  0px 1px;
+}
 
+.btnOrder:active{
+      background-position:  0px 25px;
+}
+.btnback:hover{ 
+      background-position:  0px 1px;
+}
+
+.btnback:active{
+      background-position:  0px 25px;
+}

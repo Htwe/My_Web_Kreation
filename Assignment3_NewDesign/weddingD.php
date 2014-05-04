@@ -1,12 +1,12 @@
 <html>
 <head>
-<title>Yes I Do</title>
+<title>Yes I Do | Wedding Dress</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-
+<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
 <script type="text/javascript">
 function Slider(){
 	$(".slider #1").show("fade",500);
@@ -27,7 +27,7 @@ function Slider(){
 
 </head>
 
-<body onload="Slider();">
+<body onLoad="Slider();">
 <div class="main">
 	<!---Header--->
 	<div class="header">
@@ -38,17 +38,17 @@ function Slider(){
 						<td style="width: 100px; padding-left: 300px; "><a href="#" style="text-decoration: none;">Facebook</a></td>
 						<td style="width: 100px; text-align:center;"><a href="#" style="text-decoration: none;">Twitter</a></td>
 						<td style="width: 100px; text-align:center;"><a href="#" style="text-decoration: none;">Google+</a></td>
-						<td style="width: 100px; padding-left: 400px;"><a href="#" style="text-decoration: none;">Login</a></td>
-						<td style="width: 100px;"><a href="#" style="text-decoration: none;">Register</td>
+						<td style="width: 100px; padding-left: 400px;"><a href="login.php" style="text-decoration: none;">Login</a></td>
+						<td style="width: 100px;"><a href="registration.php" style="text-decoration: none;">Register</a></td>
 					</tr>
 				</table>
 			</div>
 			<div class="logo">
-				<a href="index.html"><img src="image/logo.png" width="130" height="100" alt=""/></a>
+				<a href="index.php"><img src="image/logo.png" width="130" height="100" alt=""/></a>
 			</div>			
 			<div class="menu_nav">
 				<ul>
-				  <li class="active"><a href="index.html"><span><strong>Home</strong></span></a></li>				  
+				  <li class="active"><a href="index.php"><span><strong>Home</strong></span></a></li>				  
 				  <li><a href="#"><span><strong>Knowledge</strong></span></a>
 					<ul>
 						<li><a href="#"><strong>Size Chart</strong></a></li>
@@ -59,7 +59,7 @@ function Slider(){
 				  </li>					
 				  <li><a href="#"><span><strong>Service</strong></span></a>
 					<ul>
-						<li><a href="#"><strong>Delivery</strong></a></li>
+						<li><a href="delivery.php"><strong>Delivery</strong></a></li>
 						<li><a href="#"><strong>Credit Cart Payment</strong></a></li>						
 					</ul>
 				  </li>
@@ -88,7 +88,7 @@ function Slider(){
 				  <ul class="sidebar_menu">
 					<li><h4>Dresses</h4>
 						<ul class="slidebar_submenu">
-							<li><a href="#">Wedding Dresses</a></li>
+							<li><a href="weddingD.php">Wedding Dresses</a></li>
 							<li><a href="#">Bridesmaid Dresses</a></li>
 							<li><a href="#">Quinceanera Dresses</a></li>
 							<li><a href="#">Prom Gowns</a></li>
@@ -114,29 +114,87 @@ function Slider(){
 				  </ul>
 				</div>
 			</div>
-			<div class="main_text">	
-				<div class="slider">				 
-					<img id="1"  src="image/slide1.jpg" width="960" height="360" border="3"/>
-					<img id="2"  src="image/slide2.jpg" width="960" height="360" border="3"/>
-					<img id="3"  src="image/slide3.jpg" width="960" height="360" border="3"/>
-					<img id="4"  src="image/slide4.jpg" width="960" height="360" border="3"/>
-					<img id="5"  src="image/slide5.jpg" width="960" height="360" border="3"/>
-				</div>
-				<div class="clr"></div>
-				<div class="product">
-					<table class="product_lists" style="border:1px solid black; width: 840px; height: 450px;">
+			<div class="main_text">
+				<h1>Wedding Dress</h1>
+				<div class="product_catalog">
+					<table class="product_lists">
 						<tr>
-							<td style="border:1px solid black; background:#D8D8D8; height: 400px">
-								<img src="image/dress1.jpg" width="280px" height="400px" border="0"/>
+							<td style="height: 450px; text-align:center;">							
+								<p>
+									<a class="image_text" href="#" title="Price = S$600">
+									<img src="image/wedding dress/dress1.jpg" width="280px" height="400px" border="3"/>
+									</a>
+								</p>								
 							</td>
-							<td style="border:1px solid black; background:#D8D8D8; height: 400px">
-								<img src="image/dress2.jpeg" width="280px" height="400px" border="0"/>
+							<td style="height: 450px; text-align:center;">
+								<p>
+									<a class="image_text" href="#" title="Price = S$400">
+									<img src="image/wedding dress/dress2.jpeg" width="280px" height="400px" border="3"/>
+									</a>
+								</p>
+							</td>
+							<td style="height: 450px; text-align:center;">
+								<p>
+									<a class="image_text" href="#" title="Price = S$400">
+									<img src="image/wedding dress/dress2.jpeg" width="280px" height="400px" border="3"/>
+									</a>
+								</p>
 							</td>
 						</tr>
 						<tr>
-							<td style="border:1px solid black; background:#D8D8D8; height: 50px">Detail, price and add chart come here</td>
-							<td style="border:1px solid black; background:#D8D8D8; height: 50px">Detail, price and add chart come here</td>
-						</tr>						
+							<td class="product_details">
+								<input id="detailsBtn" type="button" value="Details">
+								<input id="addChartBtn" type="button" value="Add Chart">
+							</td>
+							<td class="product_details">
+								<input id="detailsBtn" type="button" value="Details">
+								<input id="addChartBtn" type="button" value="Add Chart">
+							</td>
+							<td class="product_details">
+								<input id="detailsBtn" type="button" value="Details">
+								<input id="addChartBtn" type="button" value="Add Chart">
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table class="product_lists">
+						<tr>
+							<td style="height: 450px; text-align:center;">							
+								<p>
+									<a class="image_text" href="#" title="Price = S$600">
+									<img src="image/wedding dress/dress1.jpg" width="280px" height="400px" border="3"/>
+									</a>
+								</p>								
+							</td>
+							<td style="height: 450px; text-align:center;">
+								<p>
+									<a class="image_text" href="#" title="Price = S$400">
+									<img src="image/wedding dress/dress2.jpeg" width="280px" height="400px" border="3"/>
+									</a>
+								</p>
+							</td>
+							<td style="height: 450px; text-align:center;">
+								<p>
+									<a class="image_text" href="#" title="Price = S$400">
+									<img src="image/wedding dress/dress2.jpeg" width="280px" height="400px" border="3"/>
+									</a>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td class="product_details">
+								<input id="detailsBtn" type="button" value="Details">
+								<input id="addChartBtn" type="button" value="Add Chart">
+							</td>
+							<td class="product_details">
+								<input id="detailsBtn" type="button" value="Details">
+								<input id="addChartBtn" type="button" value="Add Chart">
+							</td>
+							<td class="product_details">
+								<input id="detailsBtn" type="button" value="Details">
+								<input id="addChartBtn" type="button" value="Add Chart">
+							</td>
+						</tr>
 					</table>
 				</div>
 				<div class="clr"></div>
@@ -153,12 +211,12 @@ function Slider(){
 		<div class="footerBg_resize">
 			<div class="column c1">
 				<h2><span>Photo Gallery</span></h2>
-				<a href="#"><img src="image/gallery1.jpg" width="75" height="75" alt="" class="gal" /></a> 
-				<a href="#"><img src="image/gallery2.jpg" width="75" height="75" alt="" class="gal" /></a> 
-				<a href="#"><img src="image/gallery3.jpg" width="75" height="75" alt="" class="gal" /></a> 
-				<a href="#"><img src="image/gallery4.jpg" width="75" height="75" alt="" class="gal" /></a> 
-				<a href="#"><img src="image/gallery5.jpg" width="75" height="75" alt="" class="gal" /></a> 
-				<a href="#"><img src="image/gallery6.jpg" width="75" height="75" alt="" class="gal" /></a> 
+				<a href="photo_gallery.php"><img src="image/gallery/gallery1.jpg" width="75" height="75" alt="" class="gal" /></a> 
+				<a href="photo_gallery.php"><img src="image/gallery/gallery2.jpg" width="75" height="75" alt="" class="gal" /></a> 
+				<a href="photo_gallery.php"><img src="image/gallery/gallery3.jpg" width="75" height="75" alt="" class="gal" /></a> 
+				<a href="photo_gallery.php"><img src="image/gallery/gallery4.jpg" width="75" height="75" alt="" class="gal" /></a> 
+				<a href="photo_gallery.php"><img src="image/gallery/gallery5.jpg" width="75" height="75" alt="" class="gal" /></a> 
+				<a href="photo_gallery.php"><img src="image/gallery/gallery6.jpg" width="75" height="75" alt="" class="gal" /></a> 
 			</div>
 			<div class="column c2">
 				<h2><span>Feedback</span></h2>
@@ -209,7 +267,7 @@ function Slider(){
 	</div>
 </div>
 <!--jQuery plug-in code-->
-<!-- <script>
+<!---<script>
 	$('.testimonials-slider').bxSlider({
 		slideWidth: 296,
 		minSlides: 1,
@@ -218,7 +276,7 @@ function Slider(){
 		auto: true,	
 		autoControls: true
 	  });
-</script> -->
+</script> --->
 </body>
 
 </html>

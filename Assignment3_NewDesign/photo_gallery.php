@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Yes I Do</title>
+<title>Yes I Do | Photo Gallery</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 
@@ -40,17 +40,17 @@ function Slider(){
 						<td style="width: 100px; padding-left: 300px; "><a href="#" style="text-decoration: none;">Facebook</a></td>
 						<td style="width: 100px; text-align:center;"><a href="#" style="text-decoration: none;">Twitter</a></td>
 						<td style="width: 100px; text-align:center;"><a href="#" style="text-decoration: none;">Google+</a></td>
-						<td style="width: 100px; padding-left: 400px;"><a href="#" style="text-decoration: none;">Login</a></td>
-						<td style="width: 100px;"><a href="#" style="text-decoration: none;">Register</td>
+						<td style="width: 100px; padding-left: 400px;"><a href="login.php" style="text-decoration: none;">Login</a></td>
+						<td style="width: 100px;"><a href="registeration.php" style="text-decoration: none;">Register</td>
 					</tr>
 				</table>
 			</div>
 			<div class="logo">
-				<a href="index.html"><img src="image/logo.png" width="130" height="100" alt=""/></a>
+				<a href="index.php"><img src="image/logo.png" width="130" height="100" alt=""/></a>
 			</div>			
 			<div class="menu_nav">
 				<ul>
-				  <li class="active"><a href="index.html"><span><strong>Home</strong></span></a></li>				  
+				  <li class="active"><a href="index.php"><span><strong>Home</strong></span></a></li>				  
 				  <li><a href="#"><span><strong>Knowledge</strong></span></a>
 					<ul>
 						<li><a href="#"><strong>Size Chart</strong></a></li>
@@ -61,7 +61,7 @@ function Slider(){
 				  </li>					
 				  <li><a href="#"><span><strong>Service</strong></span></a>
 					<ul>
-						<li><a href="#"><strong>Delivery</strong></a></li>
+						<li><a href="delivery.php"><strong>Delivery</strong></a></li>
 						<li><a href="#"><strong>Credit Cart Payment</strong></a></li>						
 					</ul>
 				  </li>
@@ -90,7 +90,7 @@ function Slider(){
 				  <ul class="sidebar_menu">
 					<li><h4>Dresses</h4>
 						<ul class="slidebar_submenu">
-							<li><a href="#">Wedding Dresses</a></li>
+							<li><a href="weddingD.php">Wedding Dresses</a></li>
 							<li><a href="#">Bridesmaid Dresses</a></li>
 							<li><a href="#">Quinceanera Dresses</a></li>
 							<li><a href="#">Prom Gowns</a></li>
@@ -155,12 +155,12 @@ function Slider(){
 		<div class="footerBg_resize">
 			<div class="column c1">
 				<h2><span>Photo Gallery</span></h2>
-				<a href="#"><img src="image/gallery1.jpg" width="75" height="75" alt="" class="gal" /></a> 
-				<a href="#"><img src="image/gallery2.jpg" width="75" height="75" alt="" class="gal" /></a> 
-				<a href="#"><img src="image/gallery3.jpg" width="75" height="75" alt="" class="gal" /></a> 
-				<a href="#"><img src="image/gallery4.jpg" width="75" height="75" alt="" class="gal" /></a> 
-				<a href="#"><img src="image/gallery5.jpg" width="75" height="75" alt="" class="gal" /></a> 
-				<a href="#"><img src="image/gallery6.jpg" width="75" height="75" alt="" class="gal" /></a> 
+				<a href="photo_gallery.php"><img src="image/gallery/gallery1.jpg" width="75" height="75" alt="" class="gal" /></a> 
+				<a href="photo_gallery.php"><img src="image/gallery/gallery2.jpg" width="75" height="75" alt="" class="gal" /></a> 
+				<a href="photo_gallery.php"><img src="image/gallery/gallery3.jpg" width="75" height="75" alt="" class="gal" /></a> 
+				<a href="photo_gallery.php"><img src="image/gallery/gallery4.jpg" width="75" height="75" alt="" class="gal" /></a> 
+				<a href="photo_gallery.php"><img src="image/gallery/gallery5.jpg" width="75" height="75" alt="" class="gal" /></a> 
+				<a href="photo_gallery.php"><img src="image/gallery/gallery6.jpg" width="75" height="75" alt="" class="gal" /></a> 
 			</div>
 			<div class="column c2">
 				<h2><span>Feedback</span></h2>
