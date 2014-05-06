@@ -167,6 +167,18 @@ p {
     border-radius: 25px; 
 	position: relative;
 }
+.content .AboutSidebar{
+	margin-left: 20px;
+	padding:5 5 5 5 ;
+	float:left;
+	width:230px;
+	height:auto;
+	border-style:groove;
+	border-color:#980000;
+	border-width:5px;	
+    border-radius: 25px; 
+	position: relative;
+}
 .content .sidebar {
 	margin-left: -240px;
 	margin-top: 200px;
@@ -516,6 +528,15 @@ a.image_text:hover:after, a.image_text:focus:after {
 	alignment-adjust:central;
 	background-color:#fff;
 	border-radius:15px;
+}
+.content .aboutUs{
+	margin-left: 50px;
+	margin-top: 30px;	 
+	height: 400px;
+	width: 850px;
+	font-family:"Comic Sans MS", cursive;
+	font-weight:bold;
+	font-size:16px;
 }
 .formSection
 { float:left;
