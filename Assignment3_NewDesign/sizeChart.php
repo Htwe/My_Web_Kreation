@@ -6,9 +6,7 @@
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
-<script src='js/jquery.zoom.js'></script>
-<script>
+
 <script type="text/javascript">
 function Slider(){
 	$(".slider #1").show("fade",500);
@@ -57,7 +55,7 @@ function Slider(){
 				<ul>
 				  <li><a href="index.php"><span><strong>Home</strong></span></a>
                   <ul>
-						<li><a href="#"><strong>Wedding Dresses</strong></a></li>
+						<li><a href="weddingD.php"<strong>Wedding Dresses</strong></a></li>
 						<li><a href="#"><strong>Shoes</strong></a></li>
 						<li><a href="#"><strong>Accessories</strong></a></li>
 
@@ -66,21 +64,21 @@ function Slider(){
 				  <li class="active"><a href="#"><span><strong>Knowledge</strong></span></a>
 					<ul>
 						<li><a href="sizeChart.php"><strong>Size Chart</strong></a></li>
-						<li><a href="#"><strong>Color Chart</strong></a></li>
-						<li><a href="#"><strong>FAQ</strong></a></li>
-						<li><a href="#"><strong>Delivery Time</strong></a></li>
+						<li><a href="colorChart.php"><strong>Color Chart</strong></a></li>
+						<li><a href="faq.php"><strong>FAQ</strong></a></li>
+						<li><a href="terms.php"><strong>Terms&Conditions</strong></a></li>
 					</ul>
 				  </li>					
 				  <li><a href="#"><span><strong>Service</strong></span></a>
 					<ul>
-						<li><a href="delivery.php"><strong>Delivery</strong></a></li>
-						<li><a href="#"><strong>Credit Cart Payment</strong></a></li>						
+						<li><a href="delivery_reference.php"><strong>Delivery</strong></a></li>
+						<li><a href="payment_reference.php"><strong>Credit Cart Payment</strong></a></li>						
 					</ul>
 				  </li>
 				  <li><a href="#"><span><strong>About</strong></span></a>
 					<ul>
-						<li><a href="#"><strong>About Us</strong></a></li>
-						<li><a href="#"><strong>Contact Us</strong></a></li>						
+						<li><a href="About_us.php"><strong>About Us</strong></a></li>
+						<li><a href="Contact_us.php"><strong>Contact Us</strong></a></li>						
 					</ul>
 				  </li>
 				</ul>

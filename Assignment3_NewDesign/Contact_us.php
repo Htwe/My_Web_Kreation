@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" />
-<title>About us</title>
+<title>contact us</title>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 
@@ -87,27 +87,21 @@ function Slider(){
 	<!---Content--->
 	<div class="content">
 		<div class="content_resize">
-			<div class="AboutSidebar">
-            <H3 align="center">Yes I Do Creators</H3>
-            <H4 align="center">Htwe</h4>
-           <P align="center"><img src="image/About/htwe.jpg" width="150" height="100"/></P> 
-           <H4 align="center">Ivory</h4>
-           <P align="center"><img src="image/About/ivory.jpg" width="150" height="100"/></P> 
-           <H4 align="center">Sam</h4>
-           <P align="center"><img src="image/About/Sam.jpg" width="150" height="100"/></P> 
-            <H4 align="center">Sanmathi</h4>
-           <P align="center"><img src="image/About/sanmathi.jpg" width="150" height="100"/></P> </div>
+			<div class="contactSidebar">
+            <img src="image/About/ContactUs.JPG" width="240" height="700"/>
+            </div>
 			<div class="main_text">	
-				<div class="aboutUs">
-                <h3>Wanna Know about<font color="#980000"> Yes I Do</font>?</h3>
-                <h3>Here it is!</h3>
-                <p>
-                Weddings are bright and colourful, reverberating with laughter and celebrations.</p>
-               <P> In 2014, a group of energetic girls, Htwe, Ivory, Sam and Sanmathi brought wedding dress shopping to a new horizon. Our trustworthy reputation is known worldwide for the quality of wedding dress.</P>
-              <P>    Your dream of perfect wedding dress will come true with ‘Yes I Do’ Website.</P>
-              <P>    Be it a passion or a hobby, shopping has always fascinated millions of people across the globe.“ Yes I Do” is the perfect destination for your wedding Dress shopping. Our website also features designer wedding dresses, bridesmaid dresses, bridal shoes and wedding accessories. It seamlessly brings all of them to your desktop.</P>
-                <p>  We also offer convenient online payment and postal delivery.</p>
-                 <p><font size="+2" color="#980000"> Here’s a wish for your dreams to come true, from the moment u first <P> say Yes I Do!</P></font>     </p>
+				<div class="contactUs">
+              <font color="#980000">  <p>Visit us</p></font>
+<p>600, upper Thomson road,</p>
+<p>21 Lower Kent Ridge Road,</p>
+<p>Singapore</p>
+<font color="#980000"><p> Call us</p></font>
+<p>8674213453</p>
+<p>
+<font color="#980000"> Email us</font></p>
+<p>yesido@gmail.com</p>
+
                             
                 </div>
 		  

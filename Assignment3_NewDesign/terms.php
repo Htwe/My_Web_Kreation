@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
+<title>Yes I Do |FAQ</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" />
-<title>About us</title>
+
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 
@@ -23,8 +23,11 @@ function Slider(){
 				}
 			},6500);
 }
+
 </script>
+
 </head>
+
 
 <body onLoad="Slider();">
 <div class="main">
@@ -48,15 +51,15 @@ function Slider(){
 			</div>			
 			<div class="menu_nav">
 				<ul>
-				  <li ><a href="index.php"><span><strong>Home</strong></span></a>
+				  <li><a href="index.php"><span><strong>Home</strong></span></a>
 				  <ul>
-						<li><a href="weddingD.php"><strong>Wedding Dresses</strong></a></li>
+						<li><a href="sizeChart.php"><strong>Wedding Dresses</strong></a></li>
 						<li><a href="#"><strong>Shoes</strong></a></li>
 						<li><a href="#"><strong>Accessories</strong></a></li>
 
 					</ul>
 					</li>				  
-				  <li><a href="#"><span><strong>Knowledge</strong></span></a>
+				  <li class="active"><a href="#"><span><strong>Knowledge</strong></span></a>
 					<ul>
 						<li><a href="sizeChart.php"><strong>Size Chart</strong></a></li>
 						<li><a href="colorChart.php"><strong>Color Chart</strong></a></li>
@@ -70,7 +73,7 @@ function Slider(){
 						<li><a href="payment_reference.php"><strong>Credit Cart Payment</strong></a></li>						
 					</ul>
 				  </li>
-				  <li class="active"><a href="#"><span><strong>About</strong></span></a>
+				  <li><a href="#"><span><strong>About</strong></span></a>
 					<ul>
 						<li><a href="About_us.php"><strong>About Us</strong></a></li>
 						<li><a href="Contact_us.php"><strong>Contact Us</strong></a></li>						
@@ -87,33 +90,30 @@ function Slider(){
 	<!---Content--->
 	<div class="content">
 		<div class="content_resize">
-			<div class="AboutSidebar">
-            <H3 align="center">Yes I Do Creators</H3>
-            <H4 align="center">Htwe</h4>
-           <P align="center"><img src="image/About/htwe.jpg" width="150" height="100"/></P> 
-           <H4 align="center">Ivory</h4>
-           <P align="center"><img src="image/About/ivory.jpg" width="150" height="100"/></P> 
-           <H4 align="center">Sam</h4>
-           <P align="center"><img src="image/About/Sam.jpg" width="150" height="100"/></P> 
-            <H4 align="center">Sanmathi</h4>
-           <P align="center"><img src="image/About/sanmathi.jpg" width="150" height="100"/></P> </div>
-			<div class="main_text">	
-				<div class="aboutUs">
-                <h3>Wanna Know about<font color="#980000"> Yes I Do</font>?</h3>
-                <h3>Here it is!</h3>
-                <p>
-                Weddings are bright and colourful, reverberating with laughter and celebrations.</p>
-               <P> In 2014, a group of energetic girls, Htwe, Ivory, Sam and Sanmathi brought wedding dress shopping to a new horizon. Our trustworthy reputation is known worldwide for the quality of wedding dress.</P>
-              <P>    Your dream of perfect wedding dress will come true with ‘Yes I Do’ Website.</P>
-              <P>    Be it a passion or a hobby, shopping has always fascinated millions of people across the globe.“ Yes I Do” is the perfect destination for your wedding Dress shopping. Our website also features designer wedding dresses, bridesmaid dresses, bridal shoes and wedding accessories. It seamlessly brings all of them to your desktop.</P>
-                <p>  We also offer convenient online payment and postal delivery.</p>
-                 <p><font size="+2" color="#980000"> Here’s a wish for your dreams to come true, from the moment u first <P> say Yes I Do!</P></font>     </p>
-                            
-                </div>
-		  
-				
+			<div class="shopping_card">
+				<form action="#">
+                <label> No Product has been added</label>
+                <p>-------------------------------------------------</p>
+               Shipping &nbsp; &nbsp;&nbsp;&nbsp; <input type="text" name="Shipping" size="10" placeholder="S$0.00" readonly /><br/>
+              Total Cost &nbsp; &nbsp; <input type="text" name="Total" size="10" placeholder="S$0.00" readonly /><br /><br />
+             <a href="#"> <input type="submit" value="" name="Submit" class="btncheckout" /></a>
+                </form>
+			</div>
+			<div class="main_text">
+             <div class="faq">	
+			<P>TERMS AND CONDITIONS</P>
+            <p>No Minimum Requirement on purchase</p>
+            <p>All our goods/services will serve high quality</p>
+            <p>Delivery will be done by courier service, cash on delivery and local postal office</p>	
+            <p>We ensure accuracy in our billing as all our transactions</p>
+            <p>No exchange or refund after delivery</p>
+            <p>Refund will be made if purchased item is out of stock.</p>
+		 
+         
+				</div>
 				<div class="clr"></div>
-			</div></div>
+			</div>
+			</div>
 			<div class="clr"></div>				
 			</div>
 			<div class="clr"></div>
