@@ -49,13 +49,21 @@ function Slider(){
 					</tr>
 				</table>
 			</div>
+            <div class="logobg">
 			<div class="logo">
 				<a href="index.php"><img src="image/logo.png" width="130" height="100" alt=""/></a>
 			</div>			
 			<div class="menu_nav">
 				<ul>
-				  <li class="active"><a href="index.php"><span><strong>Home</strong></span></a></li>				  
-				  <li><a href="#"><span><strong>Knowledge</strong></span></a>
+				  <li><a href="index.php"><span><strong>Home</strong></span></a>
+                  <ul>
+						<li><a href="#"><strong>Wedding Dresses</strong></a></li>
+						<li><a href="#"><strong>Shoes</strong></a></li>
+						<li><a href="#"><strong>Accessories</strong></a></li>
+
+					</ul>
+                    </li>				  
+				  <li class="active"><a href="#"><span><strong>Knowledge</strong></span></a>
 					<ul>
 						<li><a href="sizeChart.php"><strong>Size Chart</strong></a></li>
 						<li><a href="#"><strong>Color Chart</strong></a></li>
@@ -78,6 +86,7 @@ function Slider(){
 				</ul>
 			</div>
 			<div class="clr"></div>
+            </div>
 		</div>
 	</div>
 	
@@ -85,46 +94,21 @@ function Slider(){
 	<div class="content">
 		<div class="content_resize">
 			<div class="shopping_card">
-				<p>Shopping Cart</p>
+				<form action="#">
+                <label> No Product has been added</label>
+                <p>-------------------------------------------------</p>
+               Shipping &nbsp; &nbsp;&nbsp;&nbsp; <input type="text" name="Shipping" size="10" placeholder="S$0.00" readonly /><br/>
+              Total Cost &nbsp; &nbsp; <input type="text" name="Total" size="10" placeholder="S$0.00" readonly /><br /><br />
+             <a href="#"> <input type="submit" value="" name="Submit" class="btncheckout" /></a>
+                </form>
 			</div>
-			<div class="sidebar">
-				<div class="gadget">
-				  <h2><span>Dresses & Accessories</span></h2>
-				  <div class="clr"></div>
-				  <ul class="sidebar_menu">
-					<li><h4>Dresses</h4>
-						<ul class="slidebar_submenu">
-							<li><a href="weddingD.php">Wedding Dresses</a></li>
-							<li><a href="#">Bridesmaid Dresses</a></li>
-							<li><a href="#">Quinceanera Dresses</a></li>
-							<li><a href="#">Prom Gowns</a></li>
-							<li><a href="#">Informal Gowns</a></li>
-						</ul>
-					</li>						
-					<li><h4>Shoes</h4>
-						<ul class="slidebar_submenu">
-							<li><a href="#">Evening Shoes</a></li>
-							<li><a href="#">Day Shoes</a></li>
-							<li><a href="#">Bridal Shoes</a></li>							
-						</ul>
-					</li>
-					<li><h4>Accessories</h4>
-						<ul class="slidebar_submenu">
-							<li><a href="#">Veils</a></li>
-							<li><a href="#">Headpieces</a></li>
-							<li><a href="#">Jewellery</a></li>	
-							<li><a href="#">Gloves</a></li>
-							<li><a href="#">Garter</a></li>							
-						</ul>
-					</li>					
-				  </ul>
-				</div>
-			</div>
+			
 			<div class="main_text">				
 				<div class="size_chart">
-					<h1>Choose your size Here</h1>
-					<table class="sizeC">
-						<tr>
+					<h1 align="center">Choose your size Here</h1>
+                    <img src="image/Knowledge/sizeChart.jpg" style="padding-left:200px"/><br><br>
+                    <table class="sizeC">
+			  <tr>
 							<td id="first_col">Standard Size</td>
 							<td colspan="4" style="text-align:center;">S</td>
 							<td colspan="4" style="text-align:center;">M</td>
@@ -241,7 +225,7 @@ function Slider(){
 							<td>112</td>	
 						</tr>
 						<tr>
-							<td id="first_col">Hollow to Floor(without shoes)</td>
+							<td id="first_col">Shoulder to Floor(without shoes)</td>
 							<td>58</td>
 							<td>147</td>
 							<td>58</td>
@@ -260,7 +244,7 @@ function Slider(){
 							<td>155</td>	
 						</tr>
 						<tr>
-							<td id="first_col" style="color:#000000;">Net Height</td>
+							<td id="first_col">Net Height</td>
 							<td>63</td>
 							<td>160</td>
 							<td>63</td>
@@ -387,7 +371,7 @@ function Slider(){
 							<td>146</td>							
 						</tr>
 						<tr>
-							<td id="first_col">Hollow to Floor(without shoes)</td>
+							<td id="first_col">Shoulder to Floor(without shoes)</td>
 							<td>61</td>
 							<td>155</td>
 							<td>61</td>
@@ -405,7 +389,7 @@ function Slider(){
 						</tr>						
 					</table>
 					<br/>
-					<p>Kid's Size Chart</p>
+					<h2>Kid's Size Chart</h2>
 					<table class="sizeC">
 						<tr>
 							<td id="first_col">US</td>
@@ -485,13 +469,13 @@ function Slider(){
 					</table>
 					<br/>
 					<h1>Measure Tips</h1>					
-					<div style="width:900px; height: 260px;">
+					<div style="width:900px; height: 260px; color:#000">
 					<hr style="width:900px; border:2px solid #980000;align:left; color:black;"/>
-						<p style="font-size:14px; color:#0000000;"><strong>Bust: </strong>This is not the same as your bra size. Instead, this is a measurement of the fullest part of your bust. While keeping your arms relaxed and at your sides, run the tape across the widest part of your back and fullest part of your bust.</p>
+						<p style="font-size:14px; color:#0000000;"><strong>Bust: </strong>This is not the same as your lingerie size. Instead, this is a measurement of the fullest part of your bust. While keeping your arms relaxed and at your sides, run the tape across the widest part of your back and fullest part of your bust.</p>
 						<p style="font-size:14px; color:#0000000;"><strong>Sleeve: </strong>Place the tape in your armpit. Measure your straight arm and stop at your wrist.</p>
 						<p style="font-size:14px; color:#0000000;"><strong>Waist: </strong>This is your natural waistline, or the smallest part of your waist. It is typically found an inch or two above your belly button. Do not suck in your waist, although you may be tempted to. You want to be able to breathe on your wedding day-and eat a slice to cake, too.</p>
-						<p style="font-size:14px; color:#0000000;"strong>Hips: </strong>This is a measurement of the fullest part of your hips. Run the tape across the hipbone.</p>
-						<p style="font-size:14px; color:#0000000;"><strong>Hollow to the floor: </strong>Stand straight with feet together. Measure from the center of your collarbone straight down to the floor.</p>
+						<p style="font-size:14px; color:#0000000;"><strong>Hips: </strong>This is a measurement of the fullest part of your hips. Run the tape across the hipbone.</p>
+						<p style="font-size:14px; color:#0000000;"><strong>Shoulder to the floor: </strong>Stand straight with feet together. Measure from the center of your collarbone straight down to the floor.</p>
 						<p style="font-size:14px; color:#0000000;"><strong>Height: </strong>Stand straight with feet together. Begin at the top of the head and pull tape down to the floor.</p>
 					</div>
 					
