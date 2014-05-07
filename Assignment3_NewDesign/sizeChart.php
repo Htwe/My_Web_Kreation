@@ -53,14 +53,35 @@ function Slider(){
 			</div>			
 			<div class="menu_nav">
 				<ul>
-				  <li><a href="index.php"><span><strong>Home</strong></span></a>
-                  <ul>
-						<li><a href="weddingD.php"<strong>Wedding Dresses</strong></a></li>
-						<li><a href="#"><strong>Shoes</strong></a></li>
-						<li><a href="#"><strong>Accessories</strong></a></li>
+				  <li class="active"><a href="index.php"><span><strong>Home</strong></span></a>
+                 <ul>
+						<li><a href="weddingD.php"><strong>Wedding Dresses</strong></a>
+						<ul>
+							<li><a href="weddingD.php"><strong>Wedding Dresses</strong></a></li>
+							<li><a href="#"><strong>Informal Dresses</strong></a></li>
+							<li><a href="#"><strong>Bridesmaid Dresses</strong></a></li>
+							<li><a href="#"><strong>Prom Dresses</strong></a></li>
+						</ul>
+						</li>
+						<li><a href="#"><strong>Shoes</strong></a>
+						<ul>
+							<li><a href="#"><strong>Evening Shoes</strong></a></li>
+							<li><a href="#"><strong>Day Shoes</strong></a></li>
+							<li><a href="#"><strong>Bridal Shoes</strong></a></li>
+						</ul>
+						</li>
+						<li><a href="#"><strong>Accessories</strong></a>
+						<ul>
+							<li><a href="#"><strong>Veils</strong></a></li>
+							<li><a href="#"><strong>Headpieces</strong></a></li>
+							<li><a href="#"><strong>Jewellery</strong></a></li>
+							<li><a href="#"><strong>Gloves</strong></a></li>
+							<li><a href="#"><strong>Garter</strong></a></li>
+						</ul>
+						</li>
 
 					</ul>
-                    </li>				  
+					</li>				  
 				  <li class="active"><a href="#"><span><strong>Knowledge</strong></span></a>
 					<ul>
 						<li><a href="sizeChart.php"><strong>Size Chart</strong></a></li>
