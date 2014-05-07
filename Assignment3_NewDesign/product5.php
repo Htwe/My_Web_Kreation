@@ -125,7 +125,7 @@ function Slider(){
 		<div class="content_resize">
 			<div class="shopping_card">
 				<form action="#">
-                <?php 				
+                <?php 
 				if(isset($_SESSION['Username'])){
 					$connect = mysql_connect("localhost","root","");
 					mysql_select_db("yesido_db");
@@ -182,26 +182,8 @@ function Slider(){
 			</div>
 			
 			<div class="main_text">
-				 <?php 
-					// $connect = mysql_connect("localhost","root","");
-					// mysql_select_db("yesido_db");
-					// $ProCode = $_POST['ProCode'];
-					
-					// //fetch the results 
-					// $query = mysql_query("SELECT * FROM yesido_db.product WHERE ProCode = '$ProCode' ");
-					// WHILE($rows = mysql_fetch_array($query)):
-					// $proCode = $rows['ProCode'];
-					// $proQty = $rows['ProQty'];
-					// $proPrice = $rows['ProPrice'];
-					// echo "
-					// <h1>Product Code : $proCode</h1>
-					// <h2>Price : S$$proPrice</h2>
-					// ";
-					// endwhile
-				 ?>
-			
-				<h1>Product Code : P0001</h1>
-				<h2>Price : S$1122</h2>
+				<h1>Product Code : P0005</h1>
+				<h2>Price : S$1085</h2>
 				<div class="product_catalog">
 					<table class="item">
 						<tr>
@@ -209,7 +191,7 @@ function Slider(){
 								<table id="item_details">
 									<tr>
 										<td>Description</td>
-										<td>Wedding dress style1</td>
+										<td>Wedding dress style5</td>
 									</tr>
 									<tr class="alt">
 										<td>Colour</td>
@@ -246,7 +228,7 @@ function Slider(){
 								</table>
 							</td>
 							<td class="zoom" id="ex" rowspan="2" style="border:3px solid #980000; height: 450px; text-align:center; width:300px">								
-								<img src="image/wedding dress/Wedding Dress/dress_1.jpg" width="280px" height="400px" border="0"/>
+								<img src="image/wedding dress/Wedding Dress/dress_5.jpg" width="280px" height="400px" border="0"/>
 								<p>Click to Zoom-In</p>
 							</td>
 						</tr>
@@ -266,10 +248,10 @@ function Slider(){
 									  <option value="9">9</option>
 									  <option value="10">10</option>
 									</select>											
-									<input type="hidden" name="ProCode" value="P0001">	
-									<input type="hidden" name="ProPrice" value="1122">
-									<input type="hidden" name="ProDesc" value="Wedding dress style1">
-									<input type="hidden" name="ProImageName" value="dress_1.jpg">
+									<input type="hidden" name="ProCode" value="P0005">	
+									<input type="hidden" name="ProPrice" value="1085">
+									<input type="hidden" name="ProDesc" value="Wedding dress style5">
+									<input type="hidden" name="ProImageName" value="dress_5.jpg">
 									</h4>
 									<input id="addCartBtn" name="product" type="submit" value="Add Cart">
 								</form>

@@ -50,7 +50,7 @@ function Slider(){
 								if(isset($_SESSION['Username'])){
 								echo($_SESSION['Username']."</a>&nbsp; <a href = 'logout.php' style='text-decoration: none'>Log Out</a>");
 								}else {
-								echo ("<a href='login_sam.php' style='text-decoration: none;'>Login</a>");
+								echo ("<a href='login.php' style='text-decoration: none;'>Login</a>");
 								}
 						?></td>
 						<td style="width: 100px;"><a href="registration.php" style="text-decoration: none;">Register</a></td>
@@ -125,7 +125,7 @@ function Slider(){
 		<div class="content_resize">
 			<div class="shopping_card">
 				<form action="#">
-                <?php 				
+                <?php 
 				if(isset($_SESSION['Username'])){
 					$connect = mysql_connect("localhost","root","");
 					mysql_select_db("yesido_db");
@@ -182,26 +182,8 @@ function Slider(){
 			</div>
 			
 			<div class="main_text">
-				 <?php 
-					// $connect = mysql_connect("localhost","root","");
-					// mysql_select_db("yesido_db");
-					// $ProCode = $_POST['ProCode'];
-					
-					// //fetch the results 
-					// $query = mysql_query("SELECT * FROM yesido_db.product WHERE ProCode = '$ProCode' ");
-					// WHILE($rows = mysql_fetch_array($query)):
-					// $proCode = $rows['ProCode'];
-					// $proQty = $rows['ProQty'];
-					// $proPrice = $rows['ProPrice'];
-					// echo "
-					// <h1>Product Code : $proCode</h1>
-					// <h2>Price : S$$proPrice</h2>
-					// ";
-					// endwhile
-				 ?>
-			
-				<h1>Product Code : P0001</h1>
-				<h2>Price : S$1122</h2>
+				<h1>Product Code : P0006</h1>
+				<h2>Price : S$935</h2>
 				<div class="product_catalog">
 					<table class="item">
 						<tr>
@@ -209,7 +191,7 @@ function Slider(){
 								<table id="item_details">
 									<tr>
 										<td>Description</td>
-										<td>Wedding dress style1</td>
+										<td>Wedding dress style6</td>
 									</tr>
 									<tr class="alt">
 										<td>Colour</td>
@@ -246,7 +228,7 @@ function Slider(){
 								</table>
 							</td>
 							<td class="zoom" id="ex" rowspan="2" style="border:3px solid #980000; height: 450px; text-align:center; width:300px">								
-								<img src="image/wedding dress/Wedding Dress/dress_1.jpg" width="280px" height="400px" border="0"/>
+								<img src="image/wedding dress/Wedding Dress/dress_6.jpg" width="280px" height="400px" border="0"/>
 								<p>Click to Zoom-In</p>
 							</td>
 						</tr>
@@ -266,10 +248,10 @@ function Slider(){
 									  <option value="9">9</option>
 									  <option value="10">10</option>
 									</select>											
-									<input type="hidden" name="ProCode" value="P0001">	
-									<input type="hidden" name="ProPrice" value="1122">
-									<input type="hidden" name="ProDesc" value="Wedding dress style1">
-									<input type="hidden" name="ProImageName" value="dress_1.jpg">
+									<input type="hidden" name="ProCode" value="P0006">	
+									<input type="hidden" name="ProPrice" value="935">
+									<input type="hidden" name="ProDesc" value="Wedding dress style6">
+									<input type="hidden" name="ProImageName" value="dress_6.jpg">
 									</h4>
 									<input id="addCartBtn" name="product" type="submit" value="Add Cart">
 								</form>
