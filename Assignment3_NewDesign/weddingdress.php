@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Yes I Do | Wedding Dress</title>
+<title>Yes I Do | Accessories</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <?php
@@ -99,7 +99,7 @@ function Slider(){
 				<ul>
 				  <li class="active"><a href="index.php"><span><strong>Home</strong></span></a>
                  <ul>
-						<li><a href="weddingD.php"><strong>Wedding Dresses</strong></a>
+						<li><a href="weddingdress.php"><strong>Wedding Dresses</strong></a>
 						<ul>
 							<li><a href="weddingdress.php"><strong>Wedding Dresses</strong></a></li>
 							<li><a href="informaldress.php"><strong>Informal Dresses</strong></a></li>
@@ -110,9 +110,9 @@ function Slider(){
 						</li>
 						<li><a href="#"><strong>Shoes</strong></a>
 						<ul>
-							<li><a href="#"><strong>Evening Shoes</strong></a></li>
-							<li><a href="#"><strong>Day Shoes</strong></a></li>
-							<li><a href="#"><strong>Bridal Shoes</strong></a></li>
+							<li><a href="eveningshoes.php"><strong>Evening Shoes</strong></a></li>
+							<li><a href="dayshoes.php"><strong>Day Shoes</strong></a></li>
+							<li><a href="bridalshoes.php"><strong>Bridal Shoes</strong></a></li>
 						</ul>
 						</li>
 						<li><a href="#"><strong>Accessories</strong></a>
@@ -225,8 +225,8 @@ function Slider(){
 						<tr>
 							<td style="height: 450px; text-align:center;">							
 								<p>
-									<a class="image_text" href="product3.php" title="Price = S$1085">
-									<img src="image/wedding dress/Wedding Dress/dress_3.jpg" width="280px" height="400px" border="3"/>
+									<a class="image_text" href="product1.php" title="Price = S$1085">
+									<img src="image/wedding dress/Wedding Dress/dress_1.jpg" width="280px" height="400px" border="3"/>
 									</a>
 								</p>								
 							</td>
@@ -239,55 +239,55 @@ function Slider(){
 							</td>
 							<td style="height: 450px; text-align:center;">
 								<p>
-									<a class="image_text" href="product1.php" title="Price = S$1122">
-									<img src="image/wedding dress/Wedding Dress/dress_1.jpg" width="280px" height="400px" border="3"/>
+									<a class="image_text" href="product3.php" title="Price = S$1122">
+									<img src="image/wedding dress/Wedding Dress/dress_3.jpg" width="280px" height="400px" border="3"/>
 									</a>
 								</p>
 							</td>
 						</tr>
 						<tr>
 							<td class="product_details">
-								<form id="product3" name="product3" action="productFunction.php" method="post">
-									<input type="hidden" name="ProCode" value="P0003">	
+								<form id="product" name="product" action="productFunction.php" method="post">
+									<input type="hidden" name="ProCode" value="P0001">	
 									<input type="hidden" name="ProPrice" value="1085">
-									<input type="hidden" name="ProDesc" value="Wedding dress style3">
-									<input type="hidden" name="ProImageName" value="dress_3.jpg">
+									<input type="hidden" name="ProDesc" value=" Lace and tulle sweetheart mermaid bridal gown with chapel train. Features embroider embellished with sequin, tiered skirt, and detachable belt tjat has same color as dress and an optional mauve belt. Short sleeve and illusion lace bolero included.">
+									<input type="hidden" name="ProImageName" value="dress_1.jpg">
 									<input type="hidden" name="quantity" value="1">
 																		
-									<input type="button" id="detailsBtn" name="product3" onclick="submitForm('3', 'product1.php')" value="Details" />
-									<input type="button" id="addChartBtn" name="product3" onclick="submitForm('3','productFunction.php')" value="Add Cart" />									
+									<input type="button" id="detailsBtn" name="product" onClick="submitForm('1', 'product1.php')" value="Details" />
+									<input type="button" id="addChartBtn" name="product" onClick="submitForm('1','productFunction.php')" value="Add Cart" />									
 								</form>
 							</td>
 							<td class="product_details">
 								<form  id="product2" name="product2" action="productFunction.php" method="post">
 									<input type="hidden" name="ProCode" value="P0002">	
 									<input type="hidden" name="ProPrice" value="1085">
-									<input type="hidden" name="ProDesc" value="Wedding dress style2">
+									<input type="hidden" name="ProDesc" value=" Drop-waist, trumpet style tulle gown with beads, sequins, and rhinestones.">
 									<input type="hidden" name="ProImageName" value="dress_2.jpg">
 									<input type="hidden" name="quantity" value="1">
 								
-									<input type="button" id="detailsBtn" name="product2" onclick="submitForm('2', 'product1.php')" value="Details" />
-									<input type="button" id="addChartBtn" name="product2" onclick="submitForm('2','productFunction.php')" value="Add Cart" />
+									<input type="button" id="detailsBtn" name="product2" onClick="submitForm('2', 'product2.php')" value="Details" />
+									<input type="button" id="addChartBtn" name="product2" onClick="submitForm('2','productFunction.php')" value="Add Cart" />
 								</form>
 							</td>
 							<td class="product_details">
-								<form id="product" name="product" action="productFunction.php" method="post">
-									<input type="hidden" name="ProCode" value="P0001">	
+								<form id="product3" name="product3" action="productFunction.php" method="post">
+									<input type="hidden" name="ProCode" value="P0003">	
 									<input type="hidden" name="ProPrice" value="1122">
-									<input type="hidden" name="ProDesc" value="Wedding dress style1">
-									<input type="hidden" name="ProImageName" value="dress_1.jpg">
+									<input type="hidden" name="ProDesc" value="Satin strapless Mermaid gown , Sweetheart neckline, with Natural waistline , Plus size and large size available, Rhinestone/Embroidery and flower accents. Lace-up back, Sweep train, Bolero">
+									<input type="hidden" name="ProImageName" value="dress_3.jpg">
 									<input type="hidden" name="quantity" value="1">
 									
-									<input type="button" id="detailsBtn" name="product" onclick="submitForm('1', 'product1.php')" value="Details" />
-									<input type="button" id="addChartBtn" name="product" onclick="submitForm('1','productFunction.php')" value="Add Cart" />
+									<input type="button" id="detailsBtn" name="product3" onClick="submitForm('3', 'product3.php')" value="Details" />
+									<input type="button" id="addChartBtn" name="product3" onClick="submitForm('3','productFunction.php')" value="Add Cart" />
 								</form>
 							</td>
 						</tr>
                         <tr>
 							<td style="height: 450px; text-align:center;">							
 								<p>
-									<a class="image_text" href="product6.php" title="Price = S$935">
-									<img src="image/wedding dress/Wedding Dress/dress_6.jpg" width="280px" height="400px" border="3"/>
+									<a class="image_text" href="product4.php" title="Price = S$935">
+									<img src="image/wedding dress/Wedding Dress/dress_4.jpg" width="280px" height="400px" border="3"/>
 									</a>
 								</p>								
 							</td>
@@ -300,47 +300,47 @@ function Slider(){
 							</td>
 							<td style="height: 450px; text-align:center;">
 								<p>
-									<a class="image_text" href="product4.php" title="Price = S$1010">
-									<img src="image/wedding dress/Wedding Dress/dress_4.jpg" width="280px" height="400px" border="3"/>
+									<a class="image_text" href="product6.php" title="Price = S$1010">
+									<img src="image/wedding dress/Wedding Dress/dress_6.jpg" width="280px" height="400px" border="3"/>
 									</a>
 								</p>
 							</td>
 						</tr>
 						<tr>
 							<td class="product_details">
-								<form  id="product6" name="product6" action="productFunction.php" method="post">
-									<input type="hidden" name="ProCode" value="P0006">	
+								<form  id="product4" name="product4" action="productFunction.php" method="post">
+									<input type="hidden" name="ProCode" value="P0004">	
 									<input type="hidden" name="ProPrice" value="935">
-									<input type="hidden" name="ProDesc" value="Wedding dress style6">
-									<input type="hidden" name="ProImageName" value="dress_6.jpg">
+									<input type="hidden" name="ProDesc" value=" Lace, mermaid gown with illusion V-neck and chapel train. Embellished with beads, pearls, sequins, and re-embroidered lace. Zipper with buttons on back.">
+									<input type="hidden" name="ProImageName" value="dress_4.jpg">
 									<input type="hidden" name="quantity" value="1">
 								
-									<input type="button" id="detailsBtn" name="product6" onclick="submitForm('6', 'product6.php')" value="Details" />
-									<input type="button" id="addChartBtn" name="product6" onclick="submitForm('6','productFunction.php')" value="Add Cart" />
+									<input type="button" id="detailsBtn" name="product4" onClick="submitForm('4', 'product4.php')" value="Details" />
+									<input type="button" id="addChartBtn" name="product4" onClick="submitForm('4','productFunction.php')" value="Add Cart" />
 								</form>
 							</td>
 							<td class="product_details">
 								<form  id="product5" name="product5" action="productFunction.php" method="post">
 									<input type="hidden" name="ProCode" value="P0005">	
 									<input type="hidden" name="ProPrice" value="1085">
-									<input type="hidden" name="ProDesc" value="Wedding dress style5">
+									<input type="hidden" name="ProDesc" value="Strapless sweetheart tulle mermaid gown with semi-cathedral train. Includes embroidery, beads, sequins, rhinestones, pearls, lace-up back. Bolero included">
 									<input type="hidden" name="ProImageName" value="dress_5.jpg">
 									<input type="hidden" name="quantity" value="1">
 								
-									<input type="button" id="detailsBtn" name="product5" onclick="submitForm('5', 'product5.php')" value="Details" />
-									<input type="button" id="addChartBtn" name="product5" onclick="submitForm('5','productFunction.php')" value="Add Cart" />
+									<input type="button" id="detailsBtn" name="product5" onClick="submitForm('5', 'product5.php')" value="Details" />
+									<input type="button" id="addChartBtn" name="product5" onClick="submitForm('5','productFunction.php')" value="Add Cart" />
 								</form>
 							</td>
 							<td class="product_details">
-								<form  id="product4" name="product4" action="productFunction.php" method="post">
-									<input type="hidden" name="ProCode" value="P0004">	
+								<form  id="product6" name="product6" action="productFunction.php" method="post">
+									<input type="hidden" name="ProCode" value="P0006">	
 									<input type="hidden" name="ProPrice" value="1010">
-									<input type="hidden" name="ProDesc" value="Wedding dress style4">
-									<input type="hidden" name="ProImageName" value="dress_4.jpg">
+									<input type="hidden" name="ProDesc" value="Tulle strapless sweetheart mermaid gown with chapel train, featuring beads, sequins, re-embroidered lace, and lace-up back. Bolero included.">
+									<input type="hidden" name="ProImageName" value="dress_6.jpg">
 									<input type="hidden" name="quantity" value="1">
 								
-									<input type="button" id="detailsBtn" name="product4" onclick="submitForm('4', 'product4.php')" value="Details" />
-									<input type="button" id="addChartBtn" name="product4" onclick="submitForm('4','productFunction.php')" value="Add Cart" />
+									<input type="button" id="detailsBtn" name="product6" onClick="submitForm('6', 'product6.php')" value="Details" />
+									<input type="button" id="addChartBtn" name="product6" onClick="submitForm('6','productFunction.php')" value="Add Cart" />
 								</form>
 							</td>
 						</tr>

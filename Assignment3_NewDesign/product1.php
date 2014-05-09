@@ -33,6 +33,13 @@ function Slider(){
 		$('#ex').zoom({ on:'click' });	
 	});
 </script>
+<script>
+    function submitForm(action)
+    {
+        document.getElementById('btnSubmit').action = action;
+        document.getElementById('btnSubmit').submit();
+    }
+</script>
 </head>
 
 <body onLoad="Slider();">
@@ -65,7 +72,7 @@ function Slider(){
 				<ul>
 				  <li class="active"><a href="index.php"><span><strong>Home</strong></span></a>
                   <ul>
-						<li><a href="weddingD.php"><strong>Wedding Dresses</strong></a>
+						<li><a href="weddingdress.php"><strong>Wedding Dresses</strong></a>
 						<ul>
 							<li><a href="weddingdress.php"><strong>Wedding Dresses</strong></a></li>
 							<li><a href="informaldress.php"><strong>Informal Dresses</strong></a></li>
@@ -76,18 +83,18 @@ function Slider(){
 						</li>
 						<li><a href="#"><strong>Shoes</strong></a>
 						<ul>
-							<li><a href="#"><strong>Evening Shoes</strong></a></li>
-							<li><a href="#"><strong>Day Shoes</strong></a></li>
-							<li><a href="#"><strong>Bridal Shoes</strong></a></li>
+							<li><a href="eveningshoes.php"><strong>Evening Shoes</strong></a></li>
+							<li><a href="dayshoes.php"><strong>Day Shoes</strong></a></li>
+							<li><a href="bridalshoes.php"><strong>Bridal Shoes</strong></a></li>
 						</ul>
 						</li>
 						<li><a href="#"><strong>Accessories</strong></a>
 						<ul>
-							<li><a href="#"><strong>Veils</strong></a></li>
-							<li><a href="#"><strong>Headpieces</strong></a></li>
-							<li><a href="#"><strong>Jewellery</strong></a></li>
-							<li><a href="#"><strong>Gloves</strong></a></li>
-							<li><a href="#"><strong>Garter</strong></a></li>
+							<li><a href="veils.php"><strong>Veils</strong></a></li>
+							<li><a href="headpieces.php"><strong>Headpieces</strong></a></li>
+							<li><a href="jewellery.php"><strong>Jewellery</strong></a></li>
+							<li><a href="gloves.php"><strong>Gloves</strong></a></li>
+							<li><a href="garter.php"><strong>Garter</strong></a></li>
 						</ul>
 						</li>
 
@@ -124,8 +131,8 @@ function Slider(){
 	<div class="content">
 		<div class="content_resize">
 			<div class="shopping_card">
-				<form action="#">
-                <?php 				
+				<form id="btnSubmit" action="#">				
+				<?php 
 				if(isset($_SESSION['Username'])){
 					$connect = mysql_connect("localhost","root","");
 					mysql_select_db("yesido_db");
@@ -156,7 +163,8 @@ function Slider(){
 					
 					echo "						
 						Total Cost &nbsp; &nbsp; <input type='text' name='Total' size='10' value='$totalCost' placeholder='S$0.00' readonly /><br /><br />
-							 <a href='delivery.php'> <input type='button' value='CHECK OUT' name='Submit' class='btncheckout' /></a>
+							 <input type='button' value='CHECK OUT' name='Submit' class='btncheckout' onclick=\"submitForm('delivery.php')\" />
+							 <input type='button' value='Empty' name='Submit' class='btnEmpty' onclick=\"submitForm('delete.php')\" />
 						";					
 					}
 					else {				
@@ -164,20 +172,22 @@ function Slider(){
 							<label> No Product has been added</label>
 								<p>-------------------------------------------------</p>							   
 							  Total Cost &nbsp; &nbsp; <input type='text' name='Total' size='10' placeholder='S$0.00' readonly /><br /><br />
-							 <a href='delivery.php'> <input type='button' value='CHECK OUT' name='Submit' class='btncheckout' /></a>
+							 <input type='button' value='CHECK OUT' name='Submit' class='btncheckout' onclick=\"submitForm('delivery.php')\" />
+							 <input type='button' value='Empty' name='Submit' class='btnEmpty' onclick=\"submitForm('delete.php')\" />
 						";
 					}									
 				}
 				else {				
 						echo "
 							<label> No Product has been added</label>
-								<p>-------------------------------------------------</p>
-							   Shipping &nbsp; &nbsp;&nbsp;&nbsp; <input type='text' name='Shipping' size='10' placeholder='S$0.00' readonly /><br/>
+								<p>-------------------------------------------------</p>							   
 							  Total Cost &nbsp; &nbsp; <input type='text' name='Total' size='10' placeholder='S$0.00' readonly /><br /><br />
-							 <a href='delivery.php'> <input type='button' value='CHECK OUT' name='Submit' class='btncheckout' /></a>
+							 <input type='button' value='CHECK OUT' name='Submit' class='btncheckout' onclick=\"submitForm('delivery.php')\" />
+							 <input type='button' value='Empty' name='Submit' class='btnEmpty' onclick=\"submitForm('delete.php')\" />
 						";
 					}
 				?>
+                
                 </form>
 			</div>
 			
@@ -201,7 +211,7 @@ function Slider(){
 				 ?>
 			
 				<h1>Product Code : P0001</h1>
-				<h2>Price : S$1122</h2>
+				<h2>Price : S$1085</h2>
 				<div class="product_catalog">
 					<table class="item">
 						<tr>
@@ -209,19 +219,19 @@ function Slider(){
 								<table id="item_details">
 									<tr>
 										<td>Description</td>
-										<td>Wedding dress style1</td>
+										<td>  Lace and tulle sweetheart mermaid bridal gown with chapel train. Features embroider embellished with sequin, tiered skirt, and detachable belt tjat has same color as dress and an optional mauve belt. Short sleeve and illusion lace bolero included.</td>
 									</tr>
 									<tr class="alt">
 										<td>Colour</td>
-										<td>Ivory</td>
+										<td>Available in White or Ivory</td>
 									</tr>
 									<tr>
 										<td>Size</td>
-										<td>0-30</td>
+										<td>2-30</td>
 									</tr>
 									<tr class="alt">
-										<td>Weight</td>
-										<td>2.0000</td>
+										<td>Fabric</td>
+										<td>Lace/Tulle</td>
 									</tr>
 									<tr>
 										<td>Build-In Bra</td>
@@ -233,11 +243,11 @@ function Slider(){
 									</tr>
 									<tr>
 										<td>Body Shape</td>
-										<td>No</td>
+										<td>Yes</td>
 									</tr>
 									<tr class="alt">
 										<td>Sleeve Length</td>
-										<td>Sleeveless</td>
+										<td>No</td>
 									</tr>
 									<tr>
 										<td>Sleeve Style</td>
@@ -267,8 +277,8 @@ function Slider(){
 									  <option value="10">10</option>
 									</select>											
 									<input type="hidden" name="ProCode" value="P0001">	
-									<input type="hidden" name="ProPrice" value="1122">
-									<input type="hidden" name="ProDesc" value="Wedding dress style1">
+									<input type="hidden" name="ProPrice" value="1085">
+									<input type="hidden" name="ProDesc" value=" Lace and tulle sweetheart mermaid bridal gown with chapel train. Features embroider embellished with sequin, tiered skirt, and detachable belt tjat has same color as dress and an optional mauve belt. Short sleeve and illusion lace bolero included.">
 									<input type="hidden" name="ProImageName" value="dress_1.jpg">
 									</h4>
 									<input id="addCartBtn" name="product" type="submit" value="Add Cart">

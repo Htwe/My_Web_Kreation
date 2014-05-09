@@ -1,9 +1,12 @@
 <html>
+
 <head>
 <title>Yes I Do</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" />
-
+<?php
+	session_start();
+?>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
@@ -60,6 +63,13 @@ function CheckSizeZoom() {
 }
 </script>
 
+<script>
+    function submitForm(action)
+    {
+        document.getElementById('btnSubmit').action = action;
+        document.getElementById('btnSubmit').submit();
+    }
+</script>
 </head>
 
 <body onLoad="Slider();">
@@ -74,124 +84,157 @@ function CheckSizeZoom() {
 						<td style="width: 100px; padding-left: 300px; "><a href="#" style="text-decoration: none;">Facebook</a></td>
 						<td style="width: 100px; text-align:center;"><a href="#" style="text-decoration: none;">Twitter</a></td>
 						<td style="width: 100px; text-align:center;"><a href="#" style="text-decoration: none;">Google+</a></td>
-						<td style="width: 100px; padding-left: 400px;"><a href="login.php" style="text-decoration: none;">Login</a></td>
+                        <td style="width: 100px; padding-left:400px;"><?php 
+								if(isset($_SESSION['Username'])){
+								echo($_SESSION['Username']."</a>&nbsp; <a href = 'logout.php' style='text-decoration: none'>Log Out</a>");
+								}else {
+								echo ("<a href='login.php' style='text-decoration: none;'>Login</a>");
+								}
+						?></td>
+						
 						<td style="width: 100px;"><a href="registration.php" style="text-decoration: none;">Register</a></td>
 					</tr>
 				</table>
 			</div>
+            <div class="logobg">
 			<div class="logo">
 				<a href="index.php"><img src="image/logo.png" width="130" height="100" alt=""/></a>
 			</div>			
 			<div class="menu_nav">
 				<ul>
-				  <li class="active"><a href="index.php"><span><strong>Home</strong></span></a></li>				  
-				  <li><a href="#"><span><strong>Knowledge</strong></span></a>
+				  <li class="active"><a href="index.php"><span><strong>Home</strong></span></a>
+                  <ul>
+						<li><a href="weddingdress.php"><strong>Wedding Dresses</strong></a>
+						<ul>
+							<li><a href="weddingdress.php"><strong>Wedding Dresses</strong></a></li>
+							<li><a href="informaldress.php"><strong>Informal Dresses</strong></a></li>
+							<li><a href="bridesmaiddress.php"><strong>Bridesmaid Dresses</strong></a></li>
+							<li><a href="quinceaneradress.php"><strong>Quinceanera Dresses</strong></a></li>                            
+							<li><a href="promdress.php"><strong>Prom Dresses</strong></a></li>
+						</ul>
+						</li>
+						<li><a href="#"><strong>Shoes</strong></a>
+						<ul>
+							<li><a href="eveningshoes.php"><strong>Evening Shoes</strong></a></li>
+							<li><a href="dayshoes.php"><strong>Day Shoes</strong></a></li>
+							<li><a href="bridalshoes.php"><strong>Bridal Shoes</strong></a></li>
+						</ul>
+						</li>
+						<li><a href="#"><strong>Accessories</strong></a>
+						<ul>
+							<li><a href="veils.php"><strong>Veils</strong></a></li>
+							<li><a href="headpieces.php"><strong>Headpieces</strong></a></li>
+							<li><a href="jewellery.php"><strong>Jewellery</strong></a></li>
+							<li><a href="gloves.php"><strong>Gloves</strong></a></li>
+							<li><a href="garter.php"><strong>Garter</strong></a></li>
+						</ul>
+						</li>
+
+				  </ul>				  
+                  </li>				  
+				  <li class="active"><a href="#"><span><strong>Knowledge</strong></span></a>
 					<ul>
-						<li><a href="#"><strong>Size Chart</strong></a></li>
-						<li><a href="#"><strong>Color Chart</strong></a></li>
-						<li><a href="#"><strong>FAQ</strong></a></li>
-						<li><a href="#"><strong>Delivery Time</strong></a></li>
+						<li><a href="sizeChart.php"><strong>Size Chart</strong></a></li>
+						<li><a href="colorChart.php"><strong>Color Chart</strong></a></li>
+						<li><a href="faq.php"><strong>FAQ</strong></a></li>
+						<li><a href="terms.php"><strong>Terms&Conditions</strong></a></li>
 					</ul>
 				  </li>					
 				  <li><a href="#"><span><strong>Service</strong></span></a>
 					<ul>
-						<li><a href="delivery.php"><strong>Delivery</strong></a></li>
-						<li><a href="#"><strong>Credit Cart Payment</strong></a></li>						
+						<li><a href="delivery_reference.php"><strong>Delivery</strong></a></li>
+						<li><a href="payment_reference.php"><strong>Credit Cart Payment</strong></a></li>						
 					</ul>
 				  </li>
 				  <li><a href="#"><span><strong>About</strong></span></a>
 					<ul>
-						<li><a href="#"><strong>About Us</strong></a></li>
-						<li><a href="#"><strong>Contact Us</strong></a></li>						
+						<li><a href="About_us.php"><strong>About Us</strong></a></li>
+						<li><a href="Contact_us.php"><strong>Contact Us</strong></a></li>						
 					</ul>
 				  </li>
 				</ul>
 			</div>
 			<div class="clr"></div>
+            </div>
 		</div>
 	</div>
 	
 	<!---Content--->
 	<div class="content">
 		<div class="content_resize">
-			<div class="shopping_card">
-				<p>Shopping Cart</p>
+		  <div class="shopping_card">
+				<form id="btnSubmit" action="#">				
+				<?php 
+				if(isset($_SESSION['Username'])){
+					$connect = mysql_connect("localhost","root","");
+					mysql_select_db("yesido_db");
+					$myusername = $_SESSION['Username'];
+					$query = mysql_query("SELECT * FROM yesido_db.sc WHERE Username = '$myusername' ");
+					$totalCost = 0;
+					//fetch the results 
+					WHILE($rows = mysql_fetch_array($query)):
+					$proCode = $rows['ProCode'];
+					$proQty = $rows['ProQty'];
+					$proPrice = $rows['ProPrice'];
+					$totalCost += $proQty * $proPrice;
+					endwhile;
+					if ($totalCost > 0) 
+					{
+						$query = mysql_query("SELECT * FROM yesido_db.sc WHERE Username = '$myusername' ");
+						WHILE($rows = mysql_fetch_array($query)):
+						$proCode = $rows['ProCode'];
+						$proQty = $rows['ProQty'];
+						$proPrice = $rows['ProPrice'];
+						echo "
+						<h3>P Code: $proCode<h3> 
+						<h3>P Qty: $proQty</h3>
+						<h3>Price: $proPrice</h3>
+						<p>--------------------</p>
+						";
+						endwhile;
+					
+					echo "						
+						Total Cost &nbsp; &nbsp; <input type='text' name='Total' size='10' value='$totalCost' placeholder='S$0.00' readonly /><br /><br />
+							 <input type='button' value='CHECK OUT' name='Submit' class='btncheckout' onclick=\"submitForm('delivery.php')\" />
+							 <input type='button' value='Empty' name='Submit' class='btnEmpty' onclick=\"submitForm('delete.php')\" />
+						";					
+					}
+					else {				
+						echo "
+							<label> No Product has been added</label>
+								<p>-------------------------------------------------</p>							   
+							  Total Cost &nbsp; &nbsp; <input type='text' name='Total' size='10' placeholder='S$0.00' readonly /><br /><br />
+							 <input type='button' value='CHECK OUT' name='Submit' class='btncheckout' onclick=\"submitForm('delivery.php')\" />
+							 <input type='button' value='Empty' name='Submit' class='btnEmpty' onclick=\"submitForm('delete.php')\" />
+						";
+					}									
+				}
+				else {				
+						echo "
+							<label> No Product has been added</label>
+								<p>-------------------------------------------------</p>							   
+							  Total Cost &nbsp; &nbsp; <input type='text' name='Total' size='10' placeholder='S$0.00' readonly /><br /><br />
+							 <input type='button' value='CHECK OUT' name='Submit' class='btncheckout' onclick=\"submitForm('delivery.php')\" />
+							 <input type='button' value='Empty' name='Submit' class='btnEmpty' onclick=\"submitForm('delete.php')\" />
+						";
+					}
+				?>
+                
+                </form>
 			</div>
-			<div class="sidebar">
-				<div class="gadget">
-				  <h2><span>Dresses & Accessories</span></h2>
-				  <div class="clr"></div>
-				  <ul class="sidebar_menu">
-					<li><h4>Dresses</h4>
-						<ul class="slidebar_submenu">
-							<li><a href="weddingD.php">Wedding Dresses</a></li>
-							<li><a href="#">Bridesmaid Dresses</a></li>
-							<li><a href="#">Quinceanera Dresses</a></li>
-							<li><a href="#">Prom Gowns</a></li>
-							<li><a href="#">Informal Gowns</a></li>
-						</ul>
-					</li>						
-					<li><h4>Shoes</h4>
-						<ul class="slidebar_submenu">
-							<li><a href="#">Evening Shoes</a></li>
-							<li><a href="#">Day Shoes</a></li>
-							<li><a href="#">Bridal Shoes</a></li>							
-						</ul>
-					</li>
-					<li><h4>Accessories</h4>
-						<ul class="slidebar_submenu">
-							<li><a href="#">Veils</a></li>
-							<li><a href="#">Headpieces</a></li>
-							<li><a href="#">Jewellery</a></li>	
-							<li><a href="#">Gloves</a></li>
-							<li><a href="#">Garter</a></li>							
-						</ul>
-					</li>					
-				  </ul>
-				</div>
-			</div>
-			<div class="main_text">	
-				<div class="slider">				 
+		  <div class="main_text">	
+			  <div class="slider">				 
 					<img id="1"  src="image/slider/slide1.jpg" width="960" height="360" border="3"/>
 					<img id="2"  src="image/slider/slide2.jpg" width="960" height="360" border="3"/>
 					<img id="3"  src="image/slider/slide3.jpg" width="960" height="360" border="3"/>
 					<img id="4"  src="image/slider/slide4.jpg" width="960" height="360" border="3"/>
 					<img id="5"  src="image/slider/slide5.jpg" width="960" height="360" border="3"/>
-				</div>
+			</div>
 				
-				<div class="product">
-					<table class="product_lists">
-						<tr>
-							<td style="height: 450px; text-align:center;">							
-								<p>
-									<a class="image_text" href="#" title="Price = S$600">
-									<img src="image/wedding dress/dress1.jpg" width="280px" height="400px" border="3"/>
-									</a>
-								</p>								
-							</td>
-							<td style="height: 450px; text-align:center;">
-								<p>
-									<a class="image_text" href="#" title="Price = S$400">
-									<img src="image/wedding dress/dress2.jpeg" width="280px" height="400px" border="3"/>
-									</a>
-								</p>
-							</td>
-						</tr>
-						<tr>
-							<td class="product_details">
-								<input id="detailsBtn" type="button" value="Details">
-								<input id="addChartBtn" type="button" value="Add Chart">
-							</td>
-							<td class="product_details">
-								<input id="detailsBtn" type="button" value="Details">
-								<input id="addChartBtn" type="button" value="Add Chart">
-							</td>
-						</tr>						
-					</table>
-				</div>
+				
 				<div class="clr"></div>
-			</div>
-			</div>
+		  </div>
+	  </div>
 			<div class="clr"></div>				
 			</div>
 			<div class="clr"></div>

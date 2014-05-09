@@ -33,6 +33,13 @@ function Slider(){
 		$('#ex').zoom({ on:'click' });	
 	});
 </script>
+<script>
+    function submitForm(action)
+    {
+        document.getElementById('btnSubmit').action = action;
+        document.getElementById('btnSubmit').submit();
+    }
+</script>
 </head>
 
 <body onLoad="Slider();">
@@ -65,7 +72,7 @@ function Slider(){
 				<ul>
 				  <li class="active"><a href="index.php"><span><strong>Home</strong></span></a>
                   <ul>
-						<li><a href="weddingD.php"><strong>Wedding Dresses</strong></a>
+						<li><a href="weddingdress.php"><strong>Wedding Dresses</strong></a>
 						<ul>
 							<li><a href="weddingdress.php"><strong>Wedding Dresses</strong></a></li>
 							<li><a href="informaldress.php"><strong>Informal Dresses</strong></a></li>
@@ -76,18 +83,18 @@ function Slider(){
 						</li>
 						<li><a href="#"><strong>Shoes</strong></a>
 						<ul>
-							<li><a href="#"><strong>Evening Shoes</strong></a></li>
-							<li><a href="#"><strong>Day Shoes</strong></a></li>
-							<li><a href="#"><strong>Bridal Shoes</strong></a></li>
+							<li><a href="eveningshoes.php"><strong>Evening Shoes</strong></a></li>
+							<li><a href="dayshoes.php"><strong>Day Shoes</strong></a></li>
+							<li><a href="bridalshoes.php"><strong>Bridal Shoes</strong></a></li>
 						</ul>
 						</li>
 						<li><a href="#"><strong>Accessories</strong></a>
 						<ul>
-							<li><a href="#"><strong>Veils</strong></a></li>
-							<li><a href="#"><strong>Headpieces</strong></a></li>
-							<li><a href="#"><strong>Jewellery</strong></a></li>
-							<li><a href="#"><strong>Gloves</strong></a></li>
-							<li><a href="#"><strong>Garter</strong></a></li>
+							<li><a href="veils.php"><strong>Veils</strong></a></li>
+							<li><a href="headpieces.php"><strong>Headpieces</strong></a></li>
+							<li><a href="jewellery.php"><strong>Jewellery</strong></a></li>
+							<li><a href="gloves.php"><strong>Gloves</strong></a></li>
+							<li><a href="garter.php"><strong>Garter</strong></a></li>
 						</ul>
 						</li>
 
@@ -124,8 +131,8 @@ function Slider(){
 	<div class="content">
 		<div class="content_resize">
 			<div class="shopping_card">
-				<form action="#">
-                <?php 
+				<form id="btnSubmit" action="#">				
+				<?php 
 				if(isset($_SESSION['Username'])){
 					$connect = mysql_connect("localhost","root","");
 					mysql_select_db("yesido_db");
@@ -156,7 +163,8 @@ function Slider(){
 					
 					echo "						
 						Total Cost &nbsp; &nbsp; <input type='text' name='Total' size='10' value='$totalCost' placeholder='S$0.00' readonly /><br /><br />
-							 <a href='delivery.php'> <input type='button' value='CHECK OUT' name='Submit' class='btncheckout' /></a>
+							 <input type='button' value='CHECK OUT' name='Submit' class='btncheckout' onclick=\"submitForm('delivery.php')\" />
+							 <input type='button' value='Empty' name='Submit' class='btnEmpty' onclick=\"submitForm('delete.php')\" />
 						";					
 					}
 					else {				
@@ -164,24 +172,44 @@ function Slider(){
 							<label> No Product has been added</label>
 								<p>-------------------------------------------------</p>							   
 							  Total Cost &nbsp; &nbsp; <input type='text' name='Total' size='10' placeholder='S$0.00' readonly /><br /><br />
-							 <a href='delivery.php'> <input type='button' value='CHECK OUT' name='Submit' class='btncheckout' /></a>
+							 <input type='button' value='CHECK OUT' name='Submit' class='btncheckout' onclick=\"submitForm('delivery.php')\" />
+							 <input type='button' value='Empty' name='Submit' class='btnEmpty' onclick=\"submitForm('delete.php')\" />
 						";
 					}									
 				}
 				else {				
 						echo "
 							<label> No Product has been added</label>
-								<p>-------------------------------------------------</p>
-							   Shipping &nbsp; &nbsp;&nbsp;&nbsp; <input type='text' name='Shipping' size='10' placeholder='S$0.00' readonly /><br/>
+								<p>-------------------------------------------------</p>							   
 							  Total Cost &nbsp; &nbsp; <input type='text' name='Total' size='10' placeholder='S$0.00' readonly /><br /><br />
-							 <a href='delivery.php'> <input type='button' value='CHECK OUT' name='Submit' class='btncheckout' /></a>
+							 <input type='button' value='CHECK OUT' name='Submit' class='btncheckout' onclick=\"submitForm('delivery.php')\" />
+							 <input type='button' value='Empty' name='Submit' class='btnEmpty' onclick=\"submitForm('delete.php')\" />
 						";
 					}
 				?>
+                
                 </form>
 			</div>
 			
 			<div class="main_text">
+				 <?php 
+					// $connect = mysql_connect("localhost","root","");
+					// mysql_select_db("yesido_db");
+					// $ProCode = $_POST['ProCode'];
+					
+					// //fetch the results 
+					// $query = mysql_query("SELECT * FROM yesido_db.product WHERE ProCode = '$ProCode' ");
+					// WHILE($rows = mysql_fetch_array($query)):
+					// $proCode = $rows['ProCode'];
+					// $proQty = $rows['ProQty'];
+					// $proPrice = $rows['ProPrice'];
+					// echo "
+					// <h1>Product Code : $proCode</h1>
+					// <h2>Price : S$$proPrice</h2>
+					// ";
+					// endwhile
+				 ?>
+			
 				<h1>Product Code : P0005</h1>
 				<h2>Price : S$1085</h2>
 				<div class="product_catalog">
@@ -191,19 +219,19 @@ function Slider(){
 								<table id="item_details">
 									<tr>
 										<td>Description</td>
-										<td>Wedding dress style5</td>
+										<td> Strapless sweetheart tulle mermaid gown with semi-cathedral train. Includes embroidery, beads, sequins, rhinestones, pearls, lace-up back. Bolero included.</td>
 									</tr>
 									<tr class="alt">
 										<td>Colour</td>
-										<td>Ivory</td>
+										<td>Available in White/Multi, Ivory/Multi</td>
 									</tr>
 									<tr>
 										<td>Size</td>
-										<td>0-30</td>
+										<td>2-30</td>
 									</tr>
 									<tr class="alt">
-										<td>Weight</td>
-										<td>2.0000</td>
+										<td>Fabric</td>
+										<td>Tulle</td>
 									</tr>
 									<tr>
 										<td>Build-In Bra</td>
@@ -211,15 +239,15 @@ function Slider(){
 									</tr>
 									<tr class="alt">
 										<td>Back Details</td>
-										<td>Zipper</td>
+										<td>Lace Back / Zipper</td>
 									</tr>
 									<tr>
 										<td>Body Shape</td>
-										<td>No</td>
+										<td>Yes</td>
 									</tr>
 									<tr class="alt">
 										<td>Sleeve Length</td>
-										<td>Sleeveless</td>
+										<td>No</td>
 									</tr>
 									<tr>
 										<td>Sleeve Style</td>
@@ -234,7 +262,7 @@ function Slider(){
 						</tr>
 						<tr>
 							<td style="height: 60px; text-align:right;">
-								<form name="product" action="productFunction.php" method="post">
+								<form name="product5" action="productFunction.php" method="post">
 									<h4 style="color:#000000">Qty
 									<select name="quantity">
 									  <option value="1">1</option>
@@ -250,10 +278,10 @@ function Slider(){
 									</select>											
 									<input type="hidden" name="ProCode" value="P0005">	
 									<input type="hidden" name="ProPrice" value="1085">
-									<input type="hidden" name="ProDesc" value="Wedding dress style5">
+									<input type="hidden" name="ProDesc" value=" Strapless sweetheart tulle mermaid gown with semi-cathedral train. Includes embroidery, beads, sequins, rhinestones, pearls, lace-up back. Bolero included">
 									<input type="hidden" name="ProImageName" value="dress_5.jpg">
 									</h4>
-									<input id="addCartBtn" name="product" type="submit" value="Add Cart">
+									<input id="addCartBtn" name="product5" type="submit" value="Add Cart">
 								</form>
 							</td>
 						</tr>
