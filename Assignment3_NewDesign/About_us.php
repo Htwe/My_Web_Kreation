@@ -24,6 +24,7 @@ function Slider(){
 			},6500);
 }
 </script>
+
 </head>
 
 <body onLoad="Slider();">
@@ -50,28 +51,29 @@ function Slider(){
 				<ul>
 				  <li class="active"><a href="index.php"><span><strong>Home</strong></span></a>
                  <ul>
-						<li><a href="weddingD.php"><strong>Wedding Dresses</strong></a>
+						<li><a href="weddingdress.php"><strong>Wedding Dresses</strong></a>
 						<ul>
-							<li><a href="weddingD.php"><strong>Wedding Dresses</strong></a></li>
-							<li><a href="#"><strong>Informal Dresses</strong></a></li>
-							<li><a href="#"><strong>Bridesmaid Dresses</strong></a></li>
-							<li><a href="#"><strong>Prom Dresses</strong></a></li>
+							<li><a href="weddingdress.php"><strong>Wedding Dresses</strong></a></li>
+							<li><a href="informaldress.php"><strong>Informal Dresses</strong></a></li>
+							<li><a href="bridesmaiddress.php"><strong>Bridesmaid Dresses</strong></a></li>
+							<li><a href="quinceaneradress.php"><strong>Quinceanera Dresses</strong></a></li>                            
+							<li><a href="promdress.php"><strong>Prom Dresses</strong></a></li>
 						</ul>
 						</li>
 						<li><a href="#"><strong>Shoes</strong></a>
 						<ul>
-							<li><a href="#"><strong>Evening Shoes</strong></a></li>
-							<li><a href="#"><strong>Day Shoes</strong></a></li>
-							<li><a href="#"><strong>Bridal Shoes</strong></a></li>
+							<li><a href="eveningshoes.php"><strong>Evening Shoes</strong></a></li>
+							<li><a href="dayshoes.php"><strong>Day Shoes</strong></a></li>
+							<li><a href="bridalshoes.php"><strong>Bridal Shoes</strong></a></li>
 						</ul>
 						</li>
 						<li><a href="#"><strong>Accessories</strong></a>
 						<ul>
-							<li><a href="#"><strong>Veils</strong></a></li>
-							<li><a href="#"><strong>Headpieces</strong></a></li>
-							<li><a href="#"><strong>Jewellery</strong></a></li>
-							<li><a href="#"><strong>Gloves</strong></a></li>
-							<li><a href="#"><strong>Garter</strong></a></li>
+							<li><a href="veils.php"><strong>Veils</strong></a></li>
+							<li><a href="headpieces.php"><strong>Headpieces</strong></a></li>
+							<li><a href="jewellery.php"><strong>Jewellery</strong></a></li>
+							<li><a href="gloves.php"><strong>Gloves</strong></a></li>
+							<li><a href="garter.php"><strong>Garter</strong></a></li>
 						</ul>
 						</li>
 
@@ -109,15 +111,8 @@ function Slider(){
 	<div class="content">
 		<div class="content_resize">
 			<div class="AboutSidebar">
-            <H3 align="center">Yes I Do Creators</H3>
-            <H4 align="center">Htwe</h4>
-           <P align="center"><img src="image/About/htwe.jpg" width="150" height="100"/></P> 
-           <H4 align="center">Ivory</h4>
-           <P align="center"><img src="image/About/ivory.jpg" width="150" height="100"/></P> 
-           <H4 align="center">Sam</h4>
-           <P align="center"><img src="image/About/Sam.jpg" width="150" height="100"/></P> 
-            <H4 align="center">Sanmathi</h4>
-           <P align="center"><img src="image/About/sanmathi.jpg" width="150" height="100"/></P> </div>
+            <img src="image/About/AboutUs.jpg" width="230" height="450"/>
+            </div>
 			<div class="main_text">	
 				<div class="aboutUs">
                 <h3>Wanna Know about<font color="#980000"> Yes I Do</font>?</h3>
@@ -129,6 +124,7 @@ function Slider(){
               <P>    Be it a passion or a hobby, shopping has always fascinated millions of people across the globe.“ Yes I Do” is the perfect destination for your wedding Dress shopping. Our website also features designer wedding dresses, bridesmaid dresses, bridal shoes and wedding accessories. It seamlessly brings all of them to your desktop.</P>
                 <p>  We also offer convenient online payment and postal delivery.</p>
                  <p><font size="+2" color="#980000"> Here’s a wish for your dreams to come true, from the moment u first <P> say Yes I Do!</P></font>     </p>
+                 <p> Please support us by giving a like to our page in Facebook!</p>
                             
                 </div>
 		  
